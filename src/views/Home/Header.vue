@@ -23,7 +23,7 @@ export default {
   top: 0;
   left: 0;
   text-align: center;
-  position: fixed;
+  // position: fixed;
 }
 
 .preloader-content {
