@@ -12,16 +12,16 @@
         <l-tooltip>{{ marker.name }}</l-tooltip>
       </l-marker>
 
-      <l-control v-if="mapReset" :position="position" >
-        <button @click="ResetMap">
+      <l-control v-if="control" :position="position" >
+        <button v-if="mapReset" @click="ResetMap">
           reset map
         </button>
 
-        <button @click="actionAdd">
+        <button v-if="add" @click="actionAdd">
           add Marker
         </button>
 
-        <button @click="actionRemove">
+        <button v-if="remove" @click="actionRemove">
           remove Marker
         </button>
       </l-control>
@@ -47,6 +47,11 @@ export default {
       type: Object,
       default: () => {}
     },
+
+    control: {
+      type: Boolean,
+      default: true
+    },
     
     mapReset : {
       type: Boolean,
@@ -58,7 +63,7 @@ export default {
       default: false
     },
 
-    remove : {
+    remove: {
       type: Boolean,
       default: false
     },
@@ -74,22 +79,8 @@ export default {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       zoom: 10,
       attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      center:  [this.location.lat, this.location.log],
-      markers:  [
-        {
-          marker: [this.location.lat, this.location.log],
-          name : "HCM"
-        },
-        {
-          marker: [10.8, 106.6],
-          name: 'xxx'
-        },
-        {
-          marker: [10.6, 106.6],
-          name: '1'
-        }
-      ],
-
+      center:  this.location.center,
+      markers: this.location.markers,
       isAdd: false,
       isRemove: false
     }

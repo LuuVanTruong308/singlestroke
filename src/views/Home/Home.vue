@@ -1,25 +1,25 @@
 <template>
   <div class="home">
-    <!-- <Header :dataHeader="header"/> -->
-    <div>
-      <MapHome :mapLocation="mapLocation"/>
-    </div>
-    <!-- <Footer/> -->
+    <Header :dataHeader="header"/>
+    <MenuBar />
+    <MapHome :mapLocation="mapLocation"/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import Header from './Header'
-// import Footer from './Footer'
+import Header from './Header'
+import Footer from './Footer'
 import MapHome from './content/MapHome'
+import MenuBar from './content/Menubar'
 
 export default {
   name: 'home',
   components: {
-    // Header,
-    // Footer,
+    Header,
+    Footer,
     MapHome,
+    MenuBar
   },
   data() {
     return {
@@ -27,9 +27,21 @@ export default {
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero-logo.png'
       },
       mapLocation: {
-        lat: '10.762622',
-        log: '106.660172',
-        name: 'Ho Chi Minh'
+        markers: [
+          {
+            marker: [10.7, 106.9],
+            name : "HCM"
+          },
+          {
+            marker: [10.8, 106.6],
+            name: 'xxx'
+          },
+          {
+            marker: [10.6, 106.6],
+            name: '1'
+          }
+        ],
+        center: [10.6, 106.6]
       }
     }
   },

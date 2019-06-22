@@ -1,9 +1,8 @@
 <template>
-  <Map :location="mapLocation"/>
+  <Map :location="mapLocation" :control="false"/>
 </template>
 
 <script>
-// @ is an alias to /src
 import Map from '@/components/Map'
 
 export default {

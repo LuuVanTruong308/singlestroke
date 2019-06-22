@@ -32,7 +32,8 @@ export default {
   max-width: 90%;
   max-height: 60vh;
   vertical-align: middle;
-  width: 400px;
-  height: 400px;
+  width: auto;
+  height: auto;
+  padding: 70px 0;
 }
 </style>
