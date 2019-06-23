@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    Footer
+    <img :src="dataHeader.img" class="preloader-content">
   </div>
 </template>
 

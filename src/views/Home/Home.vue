@@ -2,6 +2,8 @@
   <div class="home">
     <Header :dataHeader="header"/>
     <MenuBar />
+    <Jackrose />
+    <Infor />
     <MapHome :mapLocation="mapLocation"/>
     <Footer/>
   </div>
@@ -12,6 +14,8 @@ import Header from './Header'
 import Footer from './Footer'
 import MapHome from './content/MapHome'
 import MenuBar from './content/Menubar'
+import Jackrose from './content/Jackrose'
+import Infor from './content/Infor'
 
 export default {
   name: 'home',
@@ -19,7 +23,9 @@ export default {
     Header,
     Footer,
     MapHome,
-    MenuBar
+    MenuBar,
+    Jackrose,
+    Infor
   },
   data() {
     return {
