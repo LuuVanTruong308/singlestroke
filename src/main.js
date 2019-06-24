@@ -5,6 +5,7 @@ import store from './store'
 //map
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 delete Icon.Default.prototype._getIconUrl;
 
@@ -13,6 +14,8 @@ Icon.Default.mergeOptions({
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
   shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

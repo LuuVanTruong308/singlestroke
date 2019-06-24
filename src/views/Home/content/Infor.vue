@@ -4,7 +4,7 @@
       <div class="infor-img" :style="{ backgroundImage: 'url(' + infors[0].img + ')' }">
       </div>
       <div class="infor-flex">
-        <p class="name">{{ infors[0].type }} {{ infors[0].name }}</p>
+        <h4 class="name">{{ infors[0].type }} {{ infors[0].name }}</h4>
         <p class="description">{{ infors[0].description }}</p>
         <div class="infor-link">
           
@@ -14,10 +14,10 @@
 
     <div class="infor">
       <div class="infor-flex">
-        <p class="name">{{ infors[1].type }} {{ infors[1].name }}</p>
+        <h4 class="name">{{ infors[1].type }} {{ infors[1].name }}</h4>
         <p class="description">{{ infors[1].description }}</p>
         <div class="infor-link">
-          
+          <i class="fa fa-facebook"></i>
         </div>
       </div>
 
@@ -101,15 +101,23 @@ export default {
     .infor-flex {
       text-align: left;
       font-size: 14px;
-      margin: 20px;
+      padding: 42px;
+      width: 85%;
+      background-color: #f6f4f2;
 
       .name {
+        font-size: 120%;
         font-style: italic;
-        font-weight: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #444;
       }
 
       .description {
-
+        font-family: serif;
+        font-size: 14px;
+        line-height: 1.85;
+        color: #888;
       }
 
       .infor-link {

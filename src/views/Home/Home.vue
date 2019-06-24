@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header :dataHeader="header"/>
-    <MenuBar />
+    <MenuBar id="navbar"/>
     <Jackrose />
     <Infor />
     <MapHome :mapLocation="mapLocation"/>
@@ -48,8 +48,27 @@ export default {
           }
         ],
         center: [10.6, 106.6]
+      },
+      scrollY: null,
+      sticky: null,
+    }
+  },
+
+ watch: {
+    scrollY(newValue) {
+      if (newValue >= this.sticky) {
+        document.getElementById("navbar").classList.add("sticky")
+      } else {
+        document.getElementById("navbar").classList.remove("sticky")
       }
     }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', () => {
+      this.scrollY = Math.round(window.scrollY);
+      this.sticky = document.getElementById("navbar").offsetTop
+    });
   },
 }
 </script>
@@ -57,6 +76,12 @@ export default {
 .home {
   margin: 0;
   padding: 0;
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }
 </style>
 

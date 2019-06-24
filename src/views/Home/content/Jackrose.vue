@@ -3,14 +3,14 @@
     <div class="jackrose">
       <div>
         <img :src="imgJack">
-        <div class="name">Jack {{ nameJack }}</div>
+        <div class="name">JACK {{ nameJack }}</div>
       </div>
       <div class="img-and">
         <img :src="imgAnd">
       </div>
       <div>
         <img :src="imgRose">
-        <div class="name">Rose {{ nameRose }}</div>
+        <div class="name">ROSE {{ nameRose }}</div>
       </div>
     </div>
 
@@ -30,9 +30,9 @@ export default {
   data() {
     return {
       imgAnd: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-separator.png',
-      nameJack: '123 123',
+      nameJack: 'WILSON',
       imgJack: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-groom.png',
-      nameRose: '234 234',
+      nameRose: 'MARIE',
       imgRose: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-bride.png',
       location: 'Bali, Indonesia',
       time: '14 February, 2016'
@@ -55,6 +55,14 @@ export default {
       width: 160px;
       height: 100px;
       margin-top: 65px;
+    }
+
+    .name {
+      margin-top: 20px;
+      font-style: italic;
+      font-weight: 400;
+      color: #888888;
+      font-size: 20px;
     }
   }
 

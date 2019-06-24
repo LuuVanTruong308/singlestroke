@@ -1,9 +1,14 @@
 <template>
   <div class="menu-bar">
-    <div v-for="(drop, index) in listMenu" :key="index" class="dropdown">
-      <button class="dropbtn">{{ drop.name }}</button>
-      <div class="dropdown-content">
-        <a v-for="(content, indexContent) in drop.content" :key="indexContent">{{ content }}</a>
+    <div class="logo">
+      <img src="http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/header-logo.png" />
+    </div>
+    <div class="list-menu">
+      <div v-for="(drop, index) in listMenu" :key="index" class="dropdown">
+        <button class="dropbtn">{{ drop.name }}</button>
+        <div class="dropdown-content">
+          <a v-for="(content, indexContent) in drop.content" :key="indexContent">{{ content }}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -18,77 +23,98 @@ export default {
     return {
       listMenu: [
         {
-          drop: {
-            name: 'Home',
-            content : [
-              'HomeImage',
-              'HomeVideo',
-              'Home Slide'
-            ]
-          }
+          name: 'HOME',
+          content : [
+            'HOME IMAGE',
+            'HOME VIDEO',
+            'HOME SLIDE'
+          ]
         },
         {
-          drop: {
-            name: 'Home',
-            content : [
-              'HomeImage',
-              'HomeVideo',
-              'Home Slide'
-            ]
-          }
+          name: 'GROOM & BRIDE',
+          content : [
+          ]
+        },{
+          name: 'WHEN AND WHERE',
+          content : [
+          ]
+        },{
+          name: 'GALLERY',
+          content : [
+          ]
+        },{
+          name: 'BLOG',
+          content : [
+            'BLOG POSTS INDEX',
+            'SINGLE POSY',
+          ]
+        },{
+          name: 'FEATURES',
+          content : [
+            'INVITATION',
+          ]
         }
-      ]
+      ],
     }
   },
+
 }
 </script>
 
 .<style lang="scss" scoped>
   .menu-bar {
-    font-family: Georgia,Times,"Times New Roman",serif;
-    height: 71px;
     border-bottom: 1px solid #e5e5e5;
-    font-size: 12px;
-    line-height: 20px;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: #888888;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-family: italic;
+    background-color: white;
+
+    .list-menu {
+      margin: 0 140px;
+    }
 
     .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
+      background-color: white;
+      color: #888888;
       border: none;
+      height: 70px;
+      margin-right: 25px;
+      font-size: 14px;
     }
 
     .dropdown {
-      position: relative;
       display: inline-block;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
+      color: #888888;
+      background-color: white;
+      min-width: 200px;
+      text-align: left;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
     .dropdown-content a {
-      color: black;
       padding: 12px 16px;
+      background-color: white;
       text-decoration: none;
       display: block;
+      font-size: 14px;
     }
 
-    .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown-content a:hover {color: black;}
 
     .dropdown:hover .dropdown-content {display: block;}
 
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    .dropdown:hover .dropbtn {
+      border-bottom: 2px solid #b4d2c8;
+    }
   }
 </style>
