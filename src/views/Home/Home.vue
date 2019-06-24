@@ -3,10 +3,14 @@
     <Header :dataHeader="header"/>
     <MenuBar id="navbar"/>
     <Jackrose />
+    <CountDownHome />
     <Infor />
     <Event />
     <MapHome :mapLocation="mapLocation"/>
-    <Footer/>
+    <GiftRegistry />
+    <Registration />
+    <Moments />
+    <Footer :dataFooter="footer"/>
   </div>
 </template>
 
@@ -18,6 +22,23 @@ import MenuBar from './content/Menubar'
 import Jackrose from './content/Jackrose'
 import Infor from './content/Infor'
 import Event from './content/event'
+import CountDownHome from './content/CountDownHome'
+import GiftRegistry from './content/GiftRegistry'
+import Registration from './content/Registration'
+import Moments from './content/Moments'
+
+// window.onscroll = function() {myFunction()};
+
+// var navbar = document.getElementById("navbar");
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
 
 export default {
   name: 'home',
@@ -28,12 +49,20 @@ export default {
     MenuBar,
     Jackrose,
     Infor,
-    Event
+    Event,
+    CountDownHome,
+    GiftRegistry,
+    Registration,
+    Moments
   },
   data() {
     return {
       header: {
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero-logo.png'
+      },
+      footer: {
+        img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/footer-logo.png',
+        backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/footer.jpg'
       },
       mapLocation: {
         markers: [
@@ -52,27 +81,27 @@ export default {
         ],
         center: [10.6, 106.6]
       },
-      scrollY: null,
-      sticky: null,
+      // scrollY: null,
+      // sticky: null,
     }
   },
 
- watch: {
-    scrollY(newValue) {
-      if (newValue >= this.sticky) {
-        document.getElementById("navbar").classList.add("sticky")
-      } else {
-        document.getElementById("navbar").classList.remove("sticky")
-      }
-    }
-  },
+  // watch: {
+  //   scrollY(newValue) {
+  //     if (newValue >= this.sticky) {
+  //       document.getElementById("navbar").classList.add("sticky")
+  //     } else {
+  //       document.getElementById("navbar").classList.remove("sticky")
+  //     }
+  //   }
+  // },
 
-  mounted() {
-    window.addEventListener('scroll', () => {
-      this.scrollY = Math.round(window.scrollY);
-      this.sticky = document.getElementById("navbar").offsetTop
-    });
-  },
+  // mounted() {
+  //   window.addEventListener('scroll', () => {
+  //     this.scrollY = Math.round(window.scrollY);
+  //     this.sticky = document.getElementById("navbar").offsetTop
+  //   });
+  // },
 }
 </script>
 <style lang="scss" scoped>

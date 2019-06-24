@@ -6,7 +6,7 @@ import store from './store'
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import '@/styles/index.scss' // global css
+import '@/styles/main.scss' // global css
 
 delete Icon.Default.prototype._getIconUrl;
 

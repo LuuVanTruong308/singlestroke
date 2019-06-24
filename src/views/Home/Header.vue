@@ -28,11 +28,10 @@ export default {
 .preloader-content {
   position: relative;
   display: inline-block;
-  max-width: 90%;
   max-height: 60vh;
   vertical-align: middle;
   width: auto;
   height: auto;
-  padding: 70px 0;
+  padding: 8% 0;
 }
 </style>

@@ -94,6 +94,7 @@ export default {
       display: none;
       position: absolute;
       color: #888888;
+      font-style: italic;
       background-color: white;
       min-width: 200px;
       text-align: left;
@@ -106,7 +107,8 @@ export default {
       background-color: white;
       text-decoration: none;
       display: block;
-      font-size: 14px;
+      font-size: 12px;
+      font-style: italic;
     }
 
     .dropdown-content a:hover {color: black;}

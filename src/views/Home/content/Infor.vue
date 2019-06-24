@@ -1,5 +1,9 @@
 <template>
   <div class="infors">
+    <div class="header">
+      <p class="title">Groom &amp; Bride</p>
+    </div>
+
     <div class="infor">
       <div class="infor-img" :style="{ backgroundImage: 'url(' + infors[0].img + ')' }">
       </div>
@@ -84,7 +88,7 @@ export default {
 .infors {
   width: 1100px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 
   .infor {
     display: flex;
@@ -123,6 +127,22 @@ export default {
 
       .infor-link {
       }
+    }
+  }
+
+  .header {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #888;
+    text-align: center;
+
+    .title {
+      color: #dcc8b4;
+      font-family: "Alex Brush";
+      font-weight: normal;
+      font-size: 400%;
+      line-height: 0;
+      letter-spacing: 0;
     }
   }
 }
