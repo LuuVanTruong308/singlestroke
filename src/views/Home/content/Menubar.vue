@@ -70,7 +70,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: italic;
     background-color: white;
 
     .list-menu {
@@ -83,7 +82,8 @@ export default {
       border: none;
       height: 70px;
       margin-right: 25px;
-      font-size: 14px;
+      font-size: 12px;
+      font-style: italic;
     }
 
     .dropdown {

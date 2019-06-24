@@ -4,6 +4,7 @@
     <MenuBar id="navbar"/>
     <Jackrose />
     <Infor />
+    <Event />
     <MapHome :mapLocation="mapLocation"/>
     <Footer/>
   </div>
@@ -16,6 +17,7 @@ import MapHome from './content/MapHome'
 import MenuBar from './content/Menubar'
 import Jackrose from './content/Jackrose'
 import Infor from './content/Infor'
+import Event from './content/event'
 
 export default {
   name: 'home',
@@ -25,7 +27,8 @@ export default {
     MapHome,
     MenuBar,
     Jackrose,
-    Infor
+    Infor,
+    Event
   },
   data() {
     return {

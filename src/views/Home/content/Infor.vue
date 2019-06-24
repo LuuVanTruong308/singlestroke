@@ -7,7 +7,7 @@
         <h4 class="name">{{ infors[0].type }} {{ infors[0].name }}</h4>
         <p class="description">{{ infors[0].description }}</p>
         <div class="infor-link">
-          
+
         </div>
       </div>
     </div>
@@ -108,9 +108,10 @@ export default {
       .name {
         font-size: 120%;
         font-style: italic;
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
         color: #444;
+        letter-spacing: .1em;
       }
 
       .description {

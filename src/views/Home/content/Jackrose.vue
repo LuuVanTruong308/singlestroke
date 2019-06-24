@@ -1,22 +1,22 @@
 <template>
-  <div class="waper-jackrose">
+  <div class="wrapper-jackrose">
     <div class="jackrose">
       <div>
-        <img :src="imgJack">
-        <div class="name">JACK {{ nameJack }}</div>
+        <img :src="imgGroome">
+        <div class="name"> {{ nameJack }}</div>
       </div>
       <div class="img-and">
         <img :src="imgAnd">
       </div>
       <div>
-        <img :src="imgRose">
-        <div class="name">ROSE {{ nameRose }}</div>
+        <img :src="imgBrigde">
+        <div class="name">{{ nameRose }}</div>
       </div>
     </div>
 
-    <div class="are-getting-married">
-        <p class="title">Are getting married</p>
-        <p>{{ time }} - {{ location }}</p>
+    <div class="header">
+      <p class="title">Are getting married</p>
+      <p>{{ time }} - {{ location }}</p>
     </div>
   </div>
 </template>
@@ -30,10 +30,10 @@ export default {
   data() {
     return {
       imgAnd: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-separator.png',
-      nameJack: 'WILSON',
-      imgJack: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-groom.png',
-      nameRose: 'MARIE',
-      imgRose: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-bride.png',
+      nameJack: 'Jack WILSON',
+      imgGroome: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-groom.png',
+      nameRose: 'Rose MARIE',
+      imgBrigde: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-bride.png',
       location: 'Bali, Indonesia',
       time: '14 February, 2016'
     }
@@ -42,8 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.waper-jackrose {
+.wrapper-jackrose {
   margin: 100px 0;
+  text-align: center;
 
   .jackrose {
     display: flex;
@@ -63,10 +64,11 @@ export default {
       font-weight: 400;
       color: #888888;
       font-size: 20px;
+      text-transform: uppercase;
     }
   }
 
-  .are-getting-married {
+  .header {
     font-size: 14px;
     line-height: 1.85;
     color: #888;
