@@ -1,12 +1,22 @@
+import '@/styles/main.scss' // global css
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+//fontawesome
+import '@fortawesome/fontawesome-free/css/all.css'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vuetify from 'vuetify'
+
+Vue.use(Vuetify, {
+ iconfont: 'fa'
+})
+
 //map
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import '@/styles/main.scss' // global css
 
 delete Icon.Default.prototype._getIconUrl;
 

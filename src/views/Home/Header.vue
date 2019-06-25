@@ -13,7 +13,7 @@
       <div class="header-action">
         <a href="#intro" class="header-button anchor-link">
           <span>Enter Site</span>
-          <i class="fa fa-angle-double-down"></i>
+          <i class="fas fa-angle-double-down"></i>
         </a>
       </div>
     </div>
@@ -33,18 +33,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-logo {
-  position: absolute;
+  // position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
   text-align: center;
-  padding: 70px 0;
+  // padding: 70px 0;
 }
 
 .header-logo .wrapper {
-  position: relative;
+  // position: relative;
   height: 100%;
   &::before {
     content: "";
@@ -74,28 +74,33 @@ export default {
 }
 .header-action {
   position: absolute;
-  bottom: -60px;
+  bottom: 30px;
   left: 0;
   width: 100%;
   text-align: center;
-}
-.header-button {
-  display: inline-block;
-  font-size: 12px;
-  font-style: italic;
-  line-height: 20px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  animation: jackrose-hero-button 2s ease-in-out 0s infinite;
-}
-.header-button span {
-  display: block;
-}
-.header-button .fa {
-  display: block;
-  margin-top: 5px;
-  font-size: 20px;
-  font-style: normal;
+
+  .header-button {
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: jackrose-hero-button 2s ease-in-out 0s infinite;
+    text-decoration: none;
+    color: white;
+
+    span {
+      display: block;
+    }
+
+    .fa {
+      display: block;
+      margin-top: 5px;
+      font-size: 20px;
+      font-style: normal;
+    }
+  }
 }
 
 @keyframes jackrose-hero-button {

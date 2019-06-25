@@ -34,16 +34,16 @@ export default {
           img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/about-groom-540x405.jpg',
           description: "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
           icons: [{
-              title: 'fa fa-facebook',
-              link: '....'
+              title: 'fab fa-facebook',
+              link: 'https://www.facebook.com/'
             },{
-              title: 'fa fa-instagram',
+              title: 'fab fa-instagram',
               link: '.....'
             },{
-              title: 'fa fa-twitter',
+              title: 'fab fa-twitter',
               link: '...'
             },{
-              title: 'fa fa-linkedin',
+              title: 'fab fa-linkedin',
               link: '....'
             }
           ]
@@ -55,16 +55,16 @@ export default {
           img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/about-bride-540x405.jpg',
           description: "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
           icons: [{
-              title: 'fa fa-facebook',
-              link: '....'
+              title: 'fab fa-facebook',
+              link: 'https://www.facebook.com/'
             },{
-              title: 'fa fa-instagram',
+              title: 'fab fa-instagram',
               link: '.....'
             },{
-              title: 'fa fa-twitter',
+              title: 'fab fa-twitter',
               link: '...'
             },{
-              title: 'fa fa-linkedin',
+              title: 'fab fa-linkedin',
               link: '....'
             }
           ]
@@ -77,7 +77,6 @@ export default {
 
 <style lang="scss" scoped>
 .infors {
-  width: 1100px;
   margin: 0 auto;
   margin-bottom: 100px;
 
@@ -120,6 +119,8 @@ export default {
       }
 
       .infor-link {
+        display: flex;
+        color: #ccc;
       }
     }
   }
@@ -127,7 +128,6 @@ export default {
   .header {
     font-size: 14px;
     line-height: 1.85;
-    color: #888;
     text-align: center;
 
     .title {
@@ -138,6 +138,42 @@ export default {
       line-height: 0;
       letter-spacing: 0;
     }
+  }
+}
+
+.fab {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #888;
+}
+
+@media (min-width: 1281px) {
+  .infors {
+    width: 1200px;
+
+    .infor {
+      height: 400px;
+
+      .infor-flex {
+        width: 86%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .infors {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .infors {
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .infors {
   }
 }
 </style>

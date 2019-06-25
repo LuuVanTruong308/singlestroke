@@ -165,4 +165,17 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .moments {
+    width: 1150px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .moments {
+
+  }
+}
 </style>
