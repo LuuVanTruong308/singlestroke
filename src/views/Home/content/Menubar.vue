@@ -23,12 +23,7 @@ export default {
     return {
       listMenu: [
         {
-          name: 'HOME',
-          content : [
-            'HOME IMAGE',
-            'HOME VIDEO',
-            'HOME SLIDE'
-          ]
+          name: 'HOME'
         },
         {
           name: 'GROOM & BRIDE',
@@ -61,7 +56,7 @@ export default {
 }
 </script>
 
-.<style lang="scss" scoped>
+<style lang="scss" scoped>
   .menu-bar {
     border-bottom: 1px solid #e5e5e5;
     letter-spacing: .1em;

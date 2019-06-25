@@ -1,12 +1,12 @@
 <template>
   <div class="map">
-    <l-map ref="myMap" 
-      :zoom="zoom" 
-      :center="center" 
-      :options="{zoomControl: false}" 
+    <l-map ref="myMap"
+      :zoom="zoom"
+      :center="center"
+      :options="{zoomControl: false}"
       @update:center="centerUpdated"
       @click="addMarker">
-      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+      <l-tile-layer :url="url"></l-tile-layer>
 
       <l-marker v-for="(marker, index) in markers" :key="index" :lat-lng="marker.marker" @click="removeMarker(index)">
         <l-tooltip>{{ marker.name }}</l-tooltip>
@@ -52,7 +52,7 @@ export default {
       type: Boolean,
       default: true
     },
-    
+
     mapReset : {
       type: Boolean,
       default: true
@@ -78,7 +78,6 @@ export default {
     return {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       zoom: 10,
-      attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       center:  this.location.center,
       markers: this.location.markers,
       isAdd: false,
@@ -128,7 +127,7 @@ export default {
 
 <style lang="scss" scoped>
 .map {
-  height: 270px;
+  height: 460px;
   margin: 0;
 }
 </style>

@@ -78,8 +78,7 @@ export default {
 .wedding {
   display: flex;
   background-color: #f6f4f2;
-  width: 80%;
-  margin: 0 auto;
+  justify-content: center;
 
   .wedding-item {
     margin: 15px;

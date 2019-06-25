@@ -4,28 +4,18 @@
       <p class="title">Groom &amp; Bride</p>
     </div>
 
-    <div class="infor">
-      <div class="infor-img" :style="{ backgroundImage: 'url(' + infors[0].img + ')' }">
-      </div>
+    <div class="infor" v-for="(info, index) in infors" :key="index">
+      <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + info.img + ')' }"></div>
       <div class="infor-flex">
-        <h4 class="name">{{ infors[0].type }} {{ infors[0].name }}</h4>
-        <p class="description">{{ infors[0].description }}</p>
-        <div class="infor-link">
-
+        <h4 class="name">{{ info.type }} {{ info.name }}</h4>
+        <p class="description">{{ info.description }}</p>
+        <div class="infor-link" >
+          <div v-for="(icon, index) in info.icons" :key="index">
+            <a :href="icon.link">
+              <i :class="icon.title"></i>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="infor">
-      <div class="infor-flex">
-        <h4 class="name">{{ infors[1].type }} {{ infors[1].name }}</h4>
-        <p class="description">{{ infors[1].description }}</p>
-        <div class="infor-link">
-          <i class="fa fa-facebook"></i>
-        </div>
-      </div>
-
-      <div class="infor-img" :style="{ backgroundImage: 'url(' + infors[1].img + ')' }">
       </div>
     </div>
   </div>
@@ -59,6 +49,7 @@ export default {
           ]
         },
         {
+          position: 'left',
           type: 'rose',
           name: 'MARIE',
           img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/about-bride-540x405.jpg',
@@ -100,6 +91,9 @@ export default {
       height: 100%;
       background-position: center center;
       background-size: cover;
+      &.right {
+        order: 2;
+      }
     }
 
     .infor-flex {
