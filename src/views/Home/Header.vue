@@ -33,14 +33,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-logo {
-  // position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
   text-align: center;
-  // padding: 70px 0;
 }
 
 .header-logo .wrapper {
@@ -78,29 +77,26 @@ export default {
   left: 0;
   width: 100%;
   text-align: center;
-
-  .header-button {
-    display: inline-block;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    animation: jackrose-hero-button 2s ease-in-out 0s infinite;
-    text-decoration: none;
-    color: white;
-
-    span {
-      display: block;
-    }
-
-    .fa {
-      display: block;
-      margin-top: 5px;
-      font-size: 20px;
-      font-style: normal;
-    }
-  }
+}
+.header-button {
+  display: inline-block;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-style: italic;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: jackrose-hero-button 2s ease-in-out 0s infinite;
+}
+.header-button span {
+  display: block;
+}
+.header-button .fa {
+  display: block;
+  margin-top: 5px;
+  font-size: 20px;
+  font-style: normal;
 }
 
 @keyframes jackrose-hero-button {
@@ -118,9 +114,6 @@ export default {
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  -webkit-animation: jackrose-hero-button 2s ease-in-out 0s infinite;
-  -moz-animation: jackrose-hero-button 2s ease-in-out 0s infinite;
-  -o-animation: jackrose-hero-button 2s ease-in-out 0s infinite;
   animation: jackrose-hero-button 2s ease-in-out 0s infinite;
 }
 </style>
