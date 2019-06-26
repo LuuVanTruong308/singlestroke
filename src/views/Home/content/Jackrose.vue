@@ -1,22 +1,24 @@
 <template>
   <div class="wrapper-jackrose">
-    <div class="jackrose">
-      <div>
-        <img :src="imgGroome">
-        <div class="name"> {{ nameJack }}</div>
+    <div data-aos="fade-up">
+      <div class="jackrose">
+        <div>
+          <img :src="imgGroome">
+          <div class="name"> {{ nameJack }}</div>
+        </div>
+        <div class="img-and">
+          <img :src="imgAnd">
+        </div>
+        <div>
+          <img :src="imgBrigde">
+          <div class="name">{{ nameRose }}</div>
+        </div>
       </div>
-      <div class="img-and">
-        <img :src="imgAnd">
-      </div>
-      <div>
-        <img :src="imgBrigde">
-        <div class="name">{{ nameRose }}</div>
-      </div>
-    </div>
 
-    <div class="header">
-      <p class="title">Are getting married</p>
-      <p>{{ time }} - {{ location }}</p>
+      <div class="header">
+        <p class="title">Are getting married</p>
+        <p>{{ time }} - {{ location }}</p>
+      </div>
     </div>
   </div>
 </template>

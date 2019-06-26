@@ -1,5 +1,5 @@
 <template>
-  <div class="wapper-registration" :style="{ backgroundImage: 'url(' + img + ')' }">
+  <div class="wrapper-registration" :style="{ backgroundImage: 'url(' + img + ')' }">
   </div>
 </template>
 
@@ -15,9 +15,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.wapper-registration {
+.wrapper-registration {
   width: auto;
   height: 935px;
-  background-size: cover; 
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>

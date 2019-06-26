@@ -1,29 +1,21 @@
 export const MENUBAR = [
   {
-    name: 'HOME'
-  },
-  {
+    name: 'HOME',
+    link: '#home'
+  }, {
     name: 'GROOM & BRIDE',
-    content : [
-    ]
-  },{
+    link: '#groom&bride'
+  }, {
     name: 'WHEN AND WHERE',
-    content : [
-    ]
-  },{
+    link: '#when&where'
+  }, {
     name: 'GALLERY',
-    content : [
-    ]
-  },{
+    link: '#gallery'
+  }, {
     name: 'BLOG',
-    content : [
-      'BLOG POSTS INDEX',
-      'SINGLE POSY',
-    ]
-  },{
+    link: '#blog'
+  }, {
     name: 'FEATURES',
-    content : [
-      'INVITATION',
-    ]
+    link: '#features'
   }
 ]

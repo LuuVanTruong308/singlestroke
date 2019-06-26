@@ -1,7 +1,7 @@
 <template>
   <div class="home-footer" :style="{ backgroundImage: 'url(' + dataFooter.backgroup + ')' }">
     <img :src="dataFooter.img" class="preloader-content">
-    <p class="text">Copyright © 2015 — designed by Single Stroke — photographs by Kayla Barker Fine Art Photography</p>
+    <p class="text">Copyright © {{ new Date().getFullYear() }} — designed by ToiLDA</p>
   </div>
 </template>
 

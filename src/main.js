@@ -10,6 +10,9 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Vuetify from 'vuetify'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 Vue.use(Vuetify, {
  iconfont: 'fa'
 })
@@ -31,6 +34,12 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 new Vue({
+  mounted() {
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1400
+    })
+  },
   router,
   store,
   render: h => h(App)

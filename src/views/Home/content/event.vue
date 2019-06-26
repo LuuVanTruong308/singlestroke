@@ -1,17 +1,18 @@
 <template>
-  <div class="jackrose-sow-section-header align-center">
+  <div class="event-section-header align-center">
     <h2
-      class="jackrose-sow-section-heading typography-section-heading"
+      class="event-section-heading typography-section-heading"
       style="color: #c8b4a0"
     >When &amp; Where</h2>
-    <!-- <p class="jackrose-sow-section-subheading" style="color: #888888"></p> -->
-    <div class="wedding">
-      <div v-for="(item, index) in wedding" :key="index" class="wedding-item">
-        <div class="wedding-item-img" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
-        <div class="wedding-item-icon" :style="{ backgroundImage: 'url(' + item.icon + ')' }"></div>
-        <p class="wedding-item-title">{{ item.title }}</p>
-        <p class="wedding-item-des">{{ item.des }}</p>
-        <p class="wedding-item-time">{{ item.time_when }} - {{ item.time }} - {{ item.where }}</p>
+    <div data-aos="fade-up">
+      <div class="wedding">
+        <div v-for="(item, index) in wedding" :key="index" class="wedding-item">
+          <div class="wedding-item-img" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
+          <div class="wedding-item-icon" :style="{ backgroundImage: 'url(' + item.icon + ')' }"></div>
+          <p class="wedding-item-title">{{ item.title }}</p>
+          <p class="wedding-item-des">{{ item.des }}</p>
+          <p class="wedding-item-time">{{ item.time_when }} - {{ item.time }} - {{ item.where }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -49,11 +50,11 @@ export default {
 </script>
 
 <style lang="scss">
-.jackrose-sow-section-header {
+.event-section-header {
   padding-bottom: 90px
 }
 
-.jackrose-sow-section-heading {
+.event-section-heading {
   margin: 0;
 }
 .typography-section-heading {
@@ -67,7 +68,7 @@ export default {
   text-transform: none;
   color: #c8b4a0;
   background-color: #f6f4f2;
-  padding: 100px 0 30px 0;
+  padding: 60px 0 30px 0;
 }
 
 .align-center {

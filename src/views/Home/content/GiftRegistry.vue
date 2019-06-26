@@ -3,10 +3,11 @@
     <div class="header">
       <p class="title">{{ title }}</p>
     </div>
-
-    <p class="des">{{ des[0] }} <br> {{des[1]}} </p>
-    <div class="icons">
-      <div v-for="(icon, index) in icons" :key="index" class="icon" :style="{ backgroundImage: 'url(' + icon + ')' }"></div>
+    <div data-aos="fade-up">
+      <p class="des">{{ des[0] }} <br> {{des[1]}} </p>
+      <div class="icons">
+        <div v-for="(icon, index) in icons" :key="index" class="icon" :style="{ backgroundImage: 'url(' + icon + ')' }"></div>
+      </div>
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
-  <div class="header-logo">
-    <div class="wrapper" style="background-color: #b4d2c8; height: 100vh">
-      <div class="header-logo-image">
+  <div class="masthead">
+    <div class="masthead--wrapper" style="background-color: #b4d2c8; height: 100vh">
+      <div class="masthead-image">
         <img
           width="400"
           height="400"
@@ -10,8 +10,8 @@
           alt="Jack &amp; Rose"
         >
       </div>
-      <div class="header-action">
-        <a href="#intro" class="header-button anchor-link">
+      <div class="masthead-action">
+        <a href="#navbar" class="masthead-button anchor-link">
           <span>Enter Site</span>
           <i class="fas fa-angle-double-down"></i>
         </a>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.header-logo {
+.masthead {
   position: relative;
   width: 100%;
   height: 100%;
@@ -40,48 +40,49 @@ export default {
   left: 0;
   z-index: 1;
   text-align: center;
+
+  &--wrapper {
+    // position: relative;
+    height: 100%;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 0;
+      vertical-align: middle;
+    }
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
 }
 
-.header-logo .wrapper {
-  // position: relative;
-  height: 100%;
-  &::before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 0;
-    vertical-align: middle;
-  }
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-}
-.header-logo-image {
+.masthead-image {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   max-width: 90%;
 }
-.header-logo img {
+.masthead img {
   display: block;
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 60vh;
 }
-.header-action {
+.masthead-action {
   position: absolute;
   bottom: 30px;
   left: 0;
   width: 100%;
   text-align: center;
 }
-.header-button {
+.masthead-button {
   display: inline-block;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-style: italic;
   line-height: 20px;
@@ -89,10 +90,10 @@ export default {
   text-transform: uppercase;
   animation: jackrose-hero-button 2s ease-in-out 0s infinite;
 }
-.header-button span {
+.masthead-button span {
   display: block;
 }
-.header-button .fa {
+.masthead-button .fa {
   display: block;
   margin-top: 5px;
   font-size: 20px;
@@ -107,7 +108,7 @@ export default {
     transform: translate(0, -30px);
   }
 }
-.hero-button {
+.masthead-button {
   display: inline-block;
   font-size: 12px;
   font-style: italic;

@@ -4,16 +4,18 @@
       <p class="title">Groom &amp; Bride</p>
     </div>
 
-    <div class="infor" v-for="(info, index) in infors" :key="index">
-      <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + info.img + ')' }"></div>
-      <div class="infor-flex">
-        <h4 class="name">{{ info.type }} {{ info.name }}</h4>
-        <p class="description">{{ info.description }}</p>
-        <div class="infor-link" >
-          <div v-for="(icon, index) in info.icons" :key="index">
-            <a :href="icon.link">
-              <i :class="icon.title"></i>
-            </a>
+    <div data-aos="fade-up">
+      <div class="infor" v-for="(info, index) in infors" :key="index">
+        <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + info.img + ')' }"></div>
+        <div class="infor-flex">
+          <h4 class="name">{{ info.type }} {{ info.name }}</h4>
+          <p class="description">{{ info.description }}</p>
+          <div class="infor-link" >
+            <div v-for="(icon, index) in info.icons" :key="index">
+              <a :href="icon.link">
+                <i :class="icon.title"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +81,7 @@ export default {
 .infors {
   margin: 0 auto;
   margin-bottom: 100px;
+  overflow: hidden;
 
   .infor {
     display: flex;

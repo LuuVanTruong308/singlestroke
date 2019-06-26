@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header :dataHeader="header"/>
-    <MenuBar id="navbar"/>
+    <MenuBar id="navbar" />
     <Jackrose />
     <CountDownHome />
     <Infor />
@@ -9,6 +9,7 @@
     <MapHome :mapLocation="mapLocation"/>
     <GiftRegistry />
     <Registration />
+    <Quote />
     <Moments />
     <Footer :dataFooter="footer"/>
   </div>
@@ -21,24 +22,12 @@ import MapHome from './content/MapHome'
 import MenuBar from './content/Menubar'
 import Jackrose from './content/Jackrose'
 import Infor from './content/Infor'
+import Quote from './content/Quote'
 import Event from './content/event'
 import CountDownHome from './content/CountDownHome'
 import GiftRegistry from './content/GiftRegistry'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
-
-// window.onscroll = function() {myFunction()};
-
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
 
 export default {
   name: 'home',
@@ -49,6 +38,7 @@ export default {
     MenuBar,
     Jackrose,
     Infor,
+    Quote,
     Event,
     CountDownHome,
     GiftRegistry,
@@ -85,23 +75,21 @@ export default {
       // sticky: null,
     }
   },
-
-  // watch: {
-  //   scrollY(newValue) {
-  //     if (newValue >= this.sticky) {
-  //       document.getElementById("navbar").classList.add("sticky")
-  //     } else {
-  //       document.getElementById("navbar").classList.remove("sticky")
-  //     }
-  //   }
-  // },
-
-  // mounted() {
-  //   window.addEventListener('scroll', () => {
-  //     this.scrollY = Math.round(window.scrollY);
-  //     this.sticky = document.getElementById("navbar").offsetTop
-  //   });
-  // },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const windowHeight = window.innerHeight
+      const offsetHeightScroll = window.scrollY
+      const menuBar = document.getElementById('masthead')
+      if (windowHeight <= offsetHeightScroll) {
+        menuBar.style.position = 'fixed'
+      } else {
+        menuBar.style.position = 'static'
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
