@@ -126,6 +126,7 @@ export default {
   padding: 0 70px;
   clear: both;
   text-align: center;
+
   &-toggle {
     display: none;
     width: 30px;
@@ -138,11 +139,14 @@ export default {
     font-size: 20px;
     line-height: 30px;
     color: #888888;
+
     &:hover,
+
     &:focus {
       color: #444444;
     }
   }
+
   & ul {
     display: table;
     list-style: none;
@@ -164,6 +168,7 @@ export default {
     padding: 25px 0;
     margin: 0 1.5em;
     float: left;
+
     & a:after {
       content: "";
       position: absolute;
@@ -175,7 +180,9 @@ export default {
       background-color: transparent;
       transition: all 0.25s ease-in-out;
     }
+
     & a:hover:after,
+    
     & a.focus:after {
       background-color: #b4d2c8;
     }

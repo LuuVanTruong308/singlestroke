@@ -10,6 +10,9 @@
           alt="Jack &amp; Rose"
         >
       </div>
+      <!-- <div class="carousel--wrapper">
+        <Carousel :sliders="dataHeader.list_img_header" :image="true" class="carousel"/>
+      </div> -->
       <div class="masthead-action">
         <a href="#navbar" class="masthead-button anchor-link">
           <span>Enter Site</span>
@@ -21,14 +24,21 @@
 </template>
 
 <script>
+// import Carousel from "@/components/Carousel";
+
 export default {
   name: "Header",
+
+  // components: {
+  //   Carousel
+  // },
+
   props: {
     dataHeader: {
       type: Object,
       default: () => {}
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

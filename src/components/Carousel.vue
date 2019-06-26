@@ -6,7 +6,10 @@
       :centerMode="true"
       :touchDrag="true"
     >
-      <slide v-for="slide in sliders" :key="slide.id">{{ slide.quote }}</slide>
+      <slide v-for="slide in sliders" :key="slide.id">
+        <div v-if="!image"> {{ slide.quote }} </div>
+        <img v-else :src="slide.img">
+      </slide>
     </carousel>
   </div>
 </template>
@@ -22,7 +25,12 @@ export default {
   props: {
     sliders: {
       type: Array
-    }
+    },
+
+    image:  {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>
