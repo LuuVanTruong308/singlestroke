@@ -1,7 +1,7 @@
 export const MENUBAR = [
   {
     name: 'HOME',
-    link: '#home'
+    link: '#'
   }, {
     name: 'GROOM & BRIDE',
     link: '#groom&bride'

@@ -5,13 +5,13 @@
     <Jackrose />
     <CountDownHome />
     <Infor />
-    <Event />
+    <Event id="when&where" />
     <MapHome :mapLocation="mapLocation"/>
     <GiftRegistry />
     <Registration />
     <Supporter />
     <Quote />
-    <Moments />
+    <Moments id="gallery"/>
     <Footer :dataFooter="footer"/>
   </div>
 </template>

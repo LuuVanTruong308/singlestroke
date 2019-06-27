@@ -1,5 +1,5 @@
 <template>
-  <div class="infors">
+  <div class="infors" id="groom&bride">
     <div class="header">
       <p class="title">Groom &amp; Bride</p>
     </div>

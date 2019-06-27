@@ -134,6 +134,16 @@ export default {
   width: auto;
   height: 935px;
   background-size: cover;
+  &::before {
+    display: table;
+    content: " ";
+  }
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 
   .header {
     font-size: 14px;
