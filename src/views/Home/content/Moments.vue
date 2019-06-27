@@ -182,7 +182,7 @@ export default {
     flex-direction: column;
     max-height: 600px;
 
-    @for $i from 1 through 36 { 
+    @for $i from 1 through 36 {
       img:nth-child(#{$i}) {
         $h: (random(355) + 180) + px;
         height: $h;

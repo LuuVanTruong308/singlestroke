@@ -140,6 +140,9 @@ export default {
       font-size: 400%;
       line-height: 0;
       letter-spacing: 0;
+      display: block;
+      padding-top: 60px;
+      padding-bottom: 20px;
     }
   }
 }

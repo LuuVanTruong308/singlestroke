@@ -9,7 +9,7 @@
     <MapHome :mapLocation="mapLocation"/>
     <GiftRegistry />
     <Registration />
-    <Suport />
+    <Supporter />
     <Quote />
     <Moments />
     <Footer :dataFooter="footer"/>
@@ -29,7 +29,7 @@ import CountDownHome from './content/CountDownHome'
 import GiftRegistry from './content/GiftRegistry'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
-import Suport from './content/Suport'
+import Supporter from './content/Supporter'
 
 export default {
   name: 'home',
@@ -46,7 +46,7 @@ export default {
     GiftRegistry,
     Registration,
     Moments,
-    Suport
+    Supporter
   },
   data() {
     return {

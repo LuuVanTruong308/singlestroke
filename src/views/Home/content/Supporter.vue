@@ -1,13 +1,15 @@
 <template>
   <div class="suport">
-    <div v-for="(item, index) in list" :key="index" class="wapper-suport">
+    <div v-for="(item, index) in list" :key="index" class="wrapper-support">
       <div class="header">
         <p class="title">{{ item.title }}</p>
       </div>
       <div class="list-image">
         <div v-for="(image, index) in item.images" :key="index" class="image-name">
-          <img :src="image.img" :alt="image.name" class="image">
-          <p class="name">{{ image.name }}</p>
+          <div data-aos="fade-up">
+            <img :src="image.img" :alt="image.name" class="image">
+            <p class="name">{{ image.name }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -29,29 +31,29 @@ export default {
             img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen1.png'
           },{
             name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen1.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen2.png'
           },{
             name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen1.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen3.png'
           },{
             name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen1.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen4.png'
           }]
         },
         {
           title: 'The Bridesmaids',
           images: [{
             name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids2.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids1.png'
           },{
             name: 'MARTHA PEARSON',
             img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids2.png'
           },{
             name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids2.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids3.png'
           },{
             name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids2.png'
+            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids4.png'
           }]
         }
       ]
@@ -63,7 +65,7 @@ export default {
 .suport {
   margin: 50px 0;
 
-  .wapper-suport {
+  .wrapper-support {
     padding: 50px 0 25px 0;
 
     .header {
