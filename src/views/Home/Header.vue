@@ -5,7 +5,7 @@
         <img
           width="400"
           height="400"
-          src="http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero-logo.png"
+          src="@/assets/hero-logo.png"
           class="attachment-full size-full"
           alt="Jack &amp; Rose"
         >

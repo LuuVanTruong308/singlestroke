@@ -5,6 +5,9 @@
       :loop="true"
       :centerMode="true"
       :touchDrag="true"
+      :autoplay="true"
+      :autoplayTimeout="20000"
+      :autoplayHoverPause="true"
     >
       <slide v-for="slide in sliders" :key="slide.id">
         <div v-if="!image"> {{ slide.quote }} </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="moments">
+  <div class="row moments">
     <div class="header">
       <p class="title">Captured Moments</p>
     </div>
@@ -134,16 +134,6 @@ export default {
   width: auto;
   height: 935px;
   background-size: cover;
-  &::before {
-    display: table;
-    content: " ";
-  }
-
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
 
   .header {
     font-size: 14px;
@@ -217,13 +207,8 @@ export default {
 
 @media screen and (min-width: 1280px) {
   .moments {
-    width: 1150px;
+    width: 1170px;
     margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .moments {
   }
 }
 </style>

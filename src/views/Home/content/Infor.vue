@@ -155,11 +155,9 @@ export default {
 
 @media (min-width: 1281px) {
   .infors {
-    width: 1200px;
+    width: 1170px;
 
     .infor {
-      height: 400px;
-
       .infor-flex {
         width: 86%;
       }
@@ -170,16 +168,6 @@ export default {
 @media (min-width: 1025px) and (max-width: 1280px) {
   .infors {
     width: 1100px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .infors {
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .infors {
   }
 }
 </style>

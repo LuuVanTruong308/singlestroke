@@ -1,3 +1,49 @@
+$gutter: 15px;
+
 .align-center {
   text-align: center;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  width: 970px;
+}
+
+.row {
+  &::before {
+    display: table;
+    content: " ";
+  }
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@media (min-width: 1170px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 460px) {
+  .container {
+    width: 100%
+  }
 }

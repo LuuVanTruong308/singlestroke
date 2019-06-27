@@ -12,7 +12,7 @@
               <img
                 width="50"
                 height="50"
-                src="http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/header-logo.png"
+                src="@/assets/header-logo.png"
                 class="attachment-full size-full"
                 alt="Jack &amp; Rose"
               >
@@ -182,7 +182,6 @@ export default {
     }
 
     & a:hover:after,
-    
     & a.focus:after {
       background-color: #b4d2c8;
     }

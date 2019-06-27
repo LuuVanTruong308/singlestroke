@@ -33,7 +33,8 @@ new Vue({
   mounted() {
     AOS.init({
       easing: 'ease-out-back',
-      duration: 1400
+      duration: 1200,
+      anchorPlacement: 'top-center'
     })
   },
   router,
