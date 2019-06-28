@@ -12,6 +12,7 @@
     <Supporter />
     <Quote />
     <Moments id="gallery"/>
+    <Blog />
     <Footer :dataFooter="footer"/>
   </div>
 </template>
@@ -30,6 +31,9 @@ import GiftRegistry from './content/GiftRegistry'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
 import Supporter from './content/Supporter'
+import Blog from './content/Blog'
+
+import * as apiHome from '@/api/home.js'
 
 export default {
   name: 'home',
@@ -46,7 +50,8 @@ export default {
     GiftRegistry,
     Registration,
     Moments,
-    Supporter
+    Supporter,
+    Blog
   },
   data() {
     return {
@@ -88,10 +93,19 @@ export default {
       },
     }
   },
+
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    this.getInforBasicUser()
   },
+
   methods: {
+    getInforBasicUser() {
+      apiHome.getInfor().then((res) => {
+        console.log(res)
+      })
+    },
+
     handleScroll() {
       const windowHeight = window.innerHeight
       const offsetHeightScroll = window.scrollY

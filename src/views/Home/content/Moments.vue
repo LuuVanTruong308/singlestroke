@@ -132,7 +132,7 @@ export default {
 <style lang="scss" scoped>
 .moments {
   width: auto;
-  height: 935px;
+  height: 850px;
   background-size: cover;
 
   .header {
