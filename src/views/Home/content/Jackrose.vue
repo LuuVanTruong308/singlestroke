@@ -3,21 +3,21 @@
     <div data-aos="fade-up">
       <div class="jackrose">
         <div>
-          <img :src="imgGroome">
-          <div class="name"> {{ nameJack }}</div>
+          <img :src="avarta.imgGroome">
+          <div class="name"> {{ avarta.nameJack }}</div>
         </div>
         <div class="img-and">
-          <img :src="imgAnd">
+          <img :src="avarta.imgAnd">
         </div>
         <div>
-          <img :src="imgBrigde">
-          <div class="name">{{ nameRose }}</div>
+          <img :src="avarta.imgBrigde">
+          <div class="name">{{ avarta.nameRose }}</div>
         </div>
       </div>
 
       <div class="header">
         <p class="title">Are getting married</p>
-        <p>{{ time }} - {{ location }}</p>
+        <p>{{ avarta.time }} - {{ avarta.location }}</p>
       </div>
     </div>
   </div>
@@ -26,20 +26,13 @@
 <script>
 export default {
   name: 'jackrose',
-  components: {
-  },
-
-  data() {
-    return {
-      imgAnd: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-separator.png',
-      nameJack: 'Jack WILSON',
-      imgGroome: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-groom.png',
-      nameRose: 'Rose MARIE',
-      imgBrigde: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/intro-bride.png',
-      location: 'Bali, Indonesia',
-      time: '14 February, 2016'
+  
+  props: {
+    avarta: {
+      type: Object,
+      default: () => {}
     }
-  },
+  }
 }
 </script>
 

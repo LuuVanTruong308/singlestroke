@@ -4,35 +4,29 @@
       <p class="title">{{ title }}</p>
     </div>
     <div data-aos="fade-up">
-      <p class="des">{{ des[0] }} <br> {{des[1]}} </p>
+      <p class="des">{{ giftRegistry.des[0] }} <br> {{ giftRegistry.des[1]}} </p>
       <div class="icons">
-        <div v-for="(icon, index) in icons" :key="index" class="icon" :style="{ backgroundImage: 'url(' + icon + ')' }"></div>
+        <div v-for="(icon, index) in giftRegistry.icons" :key="index" class="icon" :style="{ backgroundImage: 'url(' + icon + ')' }"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { titleDiftRegistry } from './const'
 export default {
   name: 'giftRegistry',
-  components: {
-  },
 
-  data() {
-    return {
-      title: 'Gift Registry',
-      des: [
-        " We're simply grateful for your presence to celebrate the occasion with us!",
-        "If you would like to get us something, we'd love that too... we are registered at here:"
-      ],
-      icons: [
-        'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/logo-bed-bath-and-beyond.png',
-        'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/logo-crate-and-barrel.png',
-        'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/logo-honeyfund.png',
-        'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/logo-newlywish.png',
-      ]
+  props: {
+    giftRegistry: {
+      type:  Object,
+      default: () => {}
     }
   },
+
+  created() {
+    this.title = titleDiftRegistry
+  }
 }
 </script>
 

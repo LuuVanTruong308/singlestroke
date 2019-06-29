@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <Header :dataHeader="header"/>
+    <Header :dataHeader="dataHome.header"/>
     <MenuBar id="navbar" />
-    <Jackrose />
-    <CountDownHome />
-    <Infor />
-    <Event id="when&where" />
-    <MapHome :mapLocation="mapLocation"/>
-    <GiftRegistry />
-    <Registration />
-    <Supporter />
-    <Quote />
-    <Moments id="gallery"/>
-    <Blog />
-    <Footer :dataFooter="footer"/>
+    <Jackrose :avarta="dataHome.avatar"/>
+    <CountDownHome v-if="dataHome.count_down" :time-count-down="dataHome.count_down"/>
+    <Infor :inforProfile="dataHome.infors"/>
+    <Event id="when&where" :events="dataHome.events"/>
+    <MapHome :mapLocation="dataHome.mapLocation"/>
+    <GiftRegistry :giftRegistry="dataHome.giftRegistry"/>
+    <Registration :registration="dataHome.registration"/>
+    <Supporter :support="dataHome.supporter"/>
+    <Quote :quote="dataHome.quote"/>
+    <Moments id="gallery" :moment="dataHome.moment"/>
+    <Blog :blogs="dataHome.blogs"/>
+    <Footer :dataFooter="dataHome.footer"/>
   </div>
 </template>
 
@@ -53,44 +53,10 @@ export default {
     Supporter,
     Blog
   },
+
   data() {
     return {
-      header: {
-        img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero-logo.png',
-        list_img_header: [
-          {
-            id: 1,
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero3.jpg'
-          },{
-            id: 2,
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero2.jpg'
-          },{
-            id: 3,
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/hero1.jpg'
-          }
-        ]
-      },
-      footer: {
-        img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/footer-logo.png',
-        backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/footer.jpg'
-      },
-      mapLocation: {
-        markers: [
-          {
-            marker: [10.7, 106.9],
-            name : "HCM"
-          },
-          {
-            marker: [10.8, 106.6],
-            name: 'xxx'
-          },
-          {
-            marker: [10.6, 106.6],
-            name: '1'
-          }
-        ],
-        center: [10.6, 106.6]
-      },
+      dataHome: {}
     }
   },
 
@@ -100,9 +66,9 @@ export default {
   },
 
   methods: {
-    getInforBasicUser() {
+    async getInforBasicUser() {
       apiHome.getInfor().then((res) => {
-        console.log(res)
+        this.dataHome = res.data
       })
     },
 
@@ -124,6 +90,7 @@ export default {
 .home {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   .sticky {
     position: fixed;

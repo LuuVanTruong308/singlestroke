@@ -5,7 +5,7 @@
     </div>
 
     <div data-aos="fade-up">
-      <div class="infor" v-for="(info, index) in infors" :key="index">
+      <div class="infor" v-for="(info, index) in inforProfile" :key="index">
         <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + info.img + ')' }"></div>
         <div class="infor-flex">
           <h4 class="name">{{ info.type }} {{ info.name }}</h4>
@@ -27,53 +27,12 @@
 export default {
   name: 'infor',
 
-  data() {
-    return {
-      infors: [
-        {
-          type: 'jack',
-          name: 'Wilson',
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/about-groom-540x405.jpg',
-          description: "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-          icons: [{
-              title: 'fab fa-facebook',
-              link: 'https://www.facebook.com/'
-            },{
-              title: 'fab fa-instagram',
-              link: '.....'
-            },{
-              title: 'fab fa-twitter',
-              link: '...'
-            },{
-              title: 'fab fa-linkedin',
-              link: '....'
-            }
-          ]
-        },
-        {
-          position: 'left',
-          type: 'rose',
-          name: 'MARIE',
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/about-bride-540x405.jpg',
-          description: "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-          icons: [{
-              title: 'fab fa-facebook',
-              link: 'https://www.facebook.com/'
-            },{
-              title: 'fab fa-instagram',
-              link: '.....'
-            },{
-              title: 'fab fa-twitter',
-              link: '...'
-            },{
-              title: 'fab fa-linkedin',
-              link: '....'
-            }
-          ]
-        }
-      ]
+  props: {
+    inforProfile: {
+      type: Array,
+      default: () => []
     }
-  },
+  }
 }
 </script>
 

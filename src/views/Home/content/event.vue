@@ -6,7 +6,7 @@
     >When &amp; Where</h2>
     <div data-aos="fade-up">
       <div class="wedding">
-        <div v-for="(item, index) in wedding" :key="index" class="wedding-item">
+        <div v-for="(item, index) in events" :key="index" class="wedding-item">
           <div class="wedding-item-img" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
           <div class="wedding-item-icon" :style="{ backgroundImage: 'url(' + item.icon + ')' }"></div>
           <p class="wedding-item-title">{{ item.title }}</p>
@@ -22,30 +22,12 @@
 export default {
   name: 'event',
 
-  data() {
-    return {
-      wedding: [
-        {
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/event-ceremony-540x270.jpg',
-          icon: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/event-icon-ceremony.png',
-          title: 'WEDDING CEREMONY',
-          des: 'Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.',
-          time_when: 'Sunday, 14 February, 2016',
-          time: '10.00 AM',
-          where: 'St. Peter Park, Kuta, Bali'
-        },
-        {
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/event-party-540x270.jpg',
-          icon: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/event-icon-party.png',
-          title: 'WEDDING PARTY',
-          des: 'Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.',
-          time_when: 'Sunday, 14 February, 2016',
-          time: '18.00 AM',
-          where: 'St. Peter Park, Kuta, Bali'
-        }
-      ]
+  props: {
+    events: {
+      type: Array,
+      default: () => []
     }
-  },
+  }
 }
 </script>
 

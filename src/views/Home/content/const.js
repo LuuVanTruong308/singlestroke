@@ -19,3 +19,5 @@ export const MENUBAR = [
     link: '#features'
   }
 ]
+
+export const titleDiftRegistry = 'Gift Registry'

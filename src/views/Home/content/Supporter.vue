@@ -1,6 +1,6 @@
 <template>
   <div class="suport">
-    <div v-for="(item, index) in list" :key="index" class="wrapper-support">
+    <div v-for="(item, index) in support" :key="index" class="wrapper-support">
       <div class="header">
         <p class="title">{{ item.title }}</p>
       </div>
@@ -21,44 +21,12 @@
 export default {
   name: 'suport',
 
-  data() {
-    return {
-      list : [
-        {
-          title: 'The Groomsmen',
-          images: [{
-            name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen1.png'
-          },{
-            name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen2.png'
-          },{
-            name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen3.png'
-          },{
-            name: 'DONALD MORRISON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/groomsmen4.png'
-          }]
-        },
-        {
-          title: 'The Bridesmaids',
-          images: [{
-            name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids1.png'
-          },{
-            name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids2.png'
-          },{
-            name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids3.png'
-          },{
-            name: 'MARTHA PEARSON',
-            img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/bridesmaids4.png'
-          }]
-        }
-      ]
+  props: {
+    support: {
+      type: Array,
+      default: () => []
     }
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>

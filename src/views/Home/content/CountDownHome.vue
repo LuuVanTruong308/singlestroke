@@ -1,6 +1,6 @@
 <template>
   <div class="count-down-home">
-    <CountDown :deadline="time" class="count-down"/>
+    <CountDown :deadline="timeCountDown" class="count-down"/>
   </div>
 </template>
 
@@ -15,13 +15,11 @@ export default {
   },
 
   props: {
-
-  },
-  data() {
-    return {
-      time: 'August 24, 2019'
+    timeCountDown: {
+      type: String,
+      required: true
     }
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>

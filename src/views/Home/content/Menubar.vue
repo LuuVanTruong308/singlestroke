@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { MENUBAR } from "./const.js";
+import { MENUBAR } from './const';
 
 export default {
   name: "menuBar",

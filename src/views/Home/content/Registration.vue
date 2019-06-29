@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper-registration" :style="{ backgroundImage: 'url(' + img + ')' }">
+  <div class="wrapper-registration" :style="{ backgroundImage: 'url(' + registration.img + ')' }">
   </div>
 </template>
 
@@ -7,11 +7,12 @@
 export default {
   name: 'registration',
 
-  data() {
-    return {
-      img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/rsvp.jpg'
+  props: {
+    registration: {
+      type: Object,
+      default: () => {}
     }
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 <template>
   <div class="carousel--wrapper">
-    <Carousel :sliders="data" class="carousel"/>
+    <Carousel :sliders="quote" class="carousel"/>
   </div>
 </template>
 
@@ -13,24 +13,10 @@ export default {
     Carousel
   },
 
-  props: {},
-  data() {
-    return {
-      data: [{
-        id: 1,
-        quote: 'Tình yêu chân chính không bị mài mòn bởi thời gian, cũng không thể đổi thay bởi hoàn cảnh',
-        author: ''
-      },
-      {
-        id: 2,
-        quote: 'Người hiểu tình yêu, cả đời chỉ yêu một lần. Kẻ yêu năm lần bảy lượt, thích mới chán cũ, chỉ là kẻ đùa giỡn với tình yêu.',
-        author: ''
-      },
-      {
-        id: 3,
-        quote: 'Tình yêu chân chính không bị mài mòn bởi thời gian, cũng không thể đổi thay bởi hoàn cảnh',
-        author: ''
-      },]
+  props: {
+    quote: {
+      type: Array,
+      default: () => []
     }
   }
 }

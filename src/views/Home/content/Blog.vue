@@ -5,7 +5,7 @@
     </div>
 
     <div class="list-blog">
-      <div v-for="blog in list" :key="blog.id" class="blog">
+      <div v-for="blog in blogs" :key="blog.id" class="blog">
         <div class="image" :style="{ backgroundImage: 'url(' + blog.img + ')' }"></div>
         <div class="title">{{ blog.title }}</div>
         <div class="des">{{ blog.des }}</div>
@@ -24,36 +24,18 @@ export default {
   name: 'blog',
 
   props: {
-
-  },
-
-  data() {
-    return {
-      list: [
-        {
-          id: 1,
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/blog2-540x398.jpg',
-          title: 'ORGANIZING WEDDING EVENTS',
-          des: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec '
-        }, {
-          id: 2,
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/blog2-540x398.jpg',
-          title: 'DESIGNING OUR OWN WEDDING INVITATION',
-          des: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec '
-        },{
-          id: 3,
-          img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/blog2-540x398.jpg',
-          title: 'ORGANIZING WEDDING EVENTS',
-          des: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec '
-        }
-      ]
+    blogs: {
+      type: Array ,
+      defaultl: () => []
     }
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>
+@import "../../../styles/variables.scss";
+
 .blogs {
-  background-color: #f6f4f2;
+  background-color: $secondary-color;
   padding: 20px 0 60px 0;
 
   .header {

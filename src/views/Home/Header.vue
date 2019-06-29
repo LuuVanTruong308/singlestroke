@@ -9,10 +9,10 @@
           class="attachment-full size-full"
           alt="Jack &amp; Rose"
         >
+        <div class="carousel--wrapper masthead-carousel">
+          <Carousel :sliders="dataHeader.list_img_header" :image="true" class="carousel"/>
+        </div>
       </div>
-      <!-- <div class="carousel--wrapper">
-        <Carousel :sliders="dataHeader.list_img_header" :image="true" class="carousel"/>
-      </div> -->
       <div class="masthead-action">
         <a href="#navbar" class="masthead-button anchor-link">
           <span>Enter Site</span>
@@ -24,14 +24,14 @@
 </template>
 
 <script>
-// import Carousel from "@/components/Carousel";
+import Carousel from "@/components/Carousel";
 
 export default {
   name: "Header",
 
-  // components: {
-  //   Carousel
-  // },
+  components: {
+    Carousel
+  },
 
   props: {
     dataHeader: {
@@ -70,24 +70,51 @@ export default {
 }
 
 .masthead-image {
-  position: relative;
+  // position: relative;
   display: inline-block;
   vertical-align: middle;
-  max-width: 90%;
+  // max-width: 90%;
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    position: absolute;
+    z-index: 100;
+    top: 25vh;
+    left: 80vh;
+  }
+
+  .masthead-carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    .carousel {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+  }
 }
-.masthead img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 60vh;
+
+
+.masthead-image .VueCarousel-pagination {
+  height: 0px !important;
 }
+
 .masthead-action {
   position: absolute;
   bottom: 30px;
   left: 0;
   width: 100%;
   text-align: center;
+  z-index: 99999;
 }
 .masthead-button {
   display: inline-block;

@@ -4,10 +4,10 @@
       <p class="title">Captured Moments</p>
     </div>
 
-    <div data-aos="fade-up">
+    <div v-if="moment" data-aos="fade-up">
       <div class="options">
         <div
-          v-for="(item, index) in actions"
+          v-for="(item, index) in moment.actions"
           :key="index"
           class="option"
           @click="checkTypeImg(item.type)"
@@ -33,93 +33,33 @@ export default {
   name: "moments",
   data() {
     return {
-      actions: [
-        {
-          type: "all",
-          text: "ALL PHOTOS"
-        },
-        {
-          type: "Engagement",
-          text: "Engagement"
-        },
-        {
-          type: "Wedding",
-          text: "Pre-Wedding"
-        },
-        {
-          type: "Friends",
-          text: "With Friends"
-        }
-      ],
-      list_img: [
-        {
-          type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery5-540x737.jpg",
-          category: "Engagement"
-        },
-        {
-          type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery6-540x398.jpg",
-          category: "Engagement"
-        },
-        {
-          type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery1.jpg",
-          category: "Engagement"
-        },
-        {
-          type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery3.jpg",
-          category: "Wedding"
-        },
-        {
-          type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery4.jpg",
-          category: "Wedding"
-        },
-        {
-          type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery7.jpg",
-          category: "Friends"
-        },
-        {
-          type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery2.jpg",
-          category: "Friends"
-        },
-        {
-          type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery8.jpg",
-          category: "Friends"
-        }
-      ],
       filter: "all",
       list: []
     }
   },
 
-  watch: {
-    filter: function(type) {
-      this.list = this.list_img
-      if (type === "Engagement")
-        this.list = this.list_img.filter(el => el.category === "Engagement")
-      if (type === "Wedding")
-        this.list = this.list_img.filter(el => el.category === "Wedding")
-      if (type === "Friends")
-        this.list = this.list_img.filter(el => el.category === "Friends")
+  props: {
+    moment: {
+      type: Object,
+      default: () => {}
     }
   },
 
-  mounted() {
-    this.list = this.list_img
+  watch: {
+    filter: function(type) {
+      this.list = this.moment.list_img
+      if (type === "Engagement")
+        this.list = this.moment.list_img.filter(el => el.category === "Engagement")
+      if (type === "Wedding")
+        this.list = this.moment.list_img.filter(el => el.category === "Wedding")
+      if (type === "Friends")
+        this.list = this.moment.list_img.filter(el => el.category === "Friends")
+    }
+  },
+
+  created() {
+    this.list = this.moment.list_img
+    console.log('list moment', this.list)
   },
 
   methods: {
