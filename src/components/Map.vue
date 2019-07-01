@@ -22,8 +22,20 @@ export default {
     return {
       center: { lat: 21.012621, lng: 105.812477 },
       markers: [{
-        latitude: 21.012621,
-        longitude: 105.812477
+        position: {
+          lat: 21.022621,
+          lng: 105.812477
+        }
+      },{
+        position: {
+          lat: 21.013621,
+          lng: 105.812477
+        }
+      },{
+        position: {
+          lat: 21.012621,
+          lng: 105.821477
+        }
       }],
       places: [],
       currentPlace: null
