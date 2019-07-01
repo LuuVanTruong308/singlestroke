@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="masthead-carousel">
+    <div v-if="dataHeader" class="masthead-carousel">
       <agile-slider :sliders="dataHeader.list_img_header" />
     </div>
   </div>

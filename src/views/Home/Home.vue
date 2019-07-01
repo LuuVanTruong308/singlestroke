@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <Header :dataHeader="dataHome.header"/>
+    <Header :dataHeader.sync="dataHome.header"/>
     <MenuBar id="navbar" />
-    <Jackrose :avarta="dataHome.avatar"/>
-    <CountDownHome v-if="dataHome.count_down" :time-count-down="dataHome.count_down"/>
-    <Infor :inforProfile="dataHome.infors"/>
-    <Event id="when&where" :events="dataHome.events"/>
+    <Jackrose :avarta.sync="dataHome.avatar"/>
+    <CountDownHome v-if="dataHome.count_down" :time-count-down.sync="dataHome.count_down"/>
+    <Infor :inforProfile.sync="dataHome.infors"/>
+    <Event id="when&where" :events.sync="dataHome.events"/>
     <MapHome :mapLocation="dataHome.mapLocation"/>
-    <GiftRegistry :giftRegistry="dataHome.giftRegistry"/>
-    <Registration :registration="dataHome.registration"/>
-    <Supporter :support="dataHome.supporter"/>
-    <Quote :quote="dataHome.quote"/>
+    <GiftRegistry :giftRegistry.sync="dataHome.giftRegistry"/>
+    <Registration :registration.sync="dataHome.registration"/>
+    <Supporter :support.sync="dataHome.supporter"/>
+    <Quote :quote.sync="dataHome.quote"/>
     <Moments id="gallery"/>
-    <Blog :blogs="dataHome.blogs"/>
-    <Footer :dataFooter="dataHome.footer"/>
+    <Blog :blogs.sync="dataHome.blogs"/>
+    <Footer :dataFooter.sync="dataHome.footer"/>
   </div>
 </template>
 

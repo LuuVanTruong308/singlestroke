@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper-registration" :style="{ backgroundImage: 'url(' + registration.img + ')' }">
+  <div v-if="registration" class="wrapper-registration" :style="{ backgroundImage: 'url(' + registration.img + ')' }">
   </div>
 </template>
 

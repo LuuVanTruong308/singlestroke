@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-jackrose">
-    <div data-aos="fade-up">
+    <div v-if="avarta" data-aos="fade-up">
       <div class="jackrose">
         <div>
           <img :src="avarta.imgGroome">

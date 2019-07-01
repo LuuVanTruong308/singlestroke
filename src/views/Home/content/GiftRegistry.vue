@@ -3,7 +3,7 @@
     <div class="header">
       <p class="title">{{ title }}</p>
     </div>
-    <div data-aos="fade-up">
+    <div v-if="giftRegistry" data-aos="fade-up">
       <p class="des">{{ giftRegistry.des[0] }} <br> {{ giftRegistry.des[1]}} </p>
       <div class="icons">
         <div v-for="(icon, index) in giftRegistry.icons" :key="index" class="icon" :style="{ backgroundImage: 'url(' + icon + ')' }"></div>

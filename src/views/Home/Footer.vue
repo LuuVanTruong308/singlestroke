@@ -1,5 +1,5 @@
 <template>
-  <div class="home-footer" :style="{ backgroundImage: 'url(' + dataFooter.backgroup + ')' }">
+  <div v-if="dataFooter" class="home-footer" :style="{ backgroundImage: 'url(' + dataFooter.backgroup + ')' }">
     <img :src="dataFooter.img" class="preloader-content">
     <p class="text">Copyright © {{ new Date().getFullYear() }} — designed by ToiLDA</p>
   </div>
