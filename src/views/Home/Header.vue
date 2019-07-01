@@ -1,6 +1,6 @@
 <template>
   <div class="masthead">
-    <div class="masthead--wrapper" style="background-color: #b4d2c8; height: 100vh">
+    <div class="masthead--wrapper">
       <div class="masthead-image">
         <img
           width="400"
@@ -9,9 +9,6 @@
           class="attachment-full size-full"
           alt="Jack &amp; Rose"
         >
-        <!-- <div class="carousel--wrapper masthead-carousel">
-          <Carousel :sliders="dataHeader.list_img_header" :image="true" class="carousel"/>
-        </div> -->
       </div>
       <div class="masthead-action">
         <a href="#navbar" class="masthead-button anchor-link">
@@ -20,19 +17,21 @@
         </a>
       </div>
     </div>
+
+    <div class="masthead-carousel">
+      <agile-slider :sliders="dataHeader.list_img_header" />
+    </div>
   </div>
 </template>
 
 <script>
-// import Carousel from "@/components/Carousel";
+import AgileSlider from '@/components/AgileSlide'
 
 export default {
   name: "Header",
-
-  // components: {
-  //   Carousel
-  // },
-
+  components: {
+    AgileSlider
+  },
   props: {
     dataHeader: {
       type: Object,
@@ -52,8 +51,9 @@ export default {
   text-align: center;
 
   &--wrapper {
-    // position: relative;
     height: 100%;
+    background-color: #b4d2c8;
+    height: 100vh;
     &::before {
       content: "";
       display: inline-block;
@@ -74,8 +74,7 @@ export default {
   display: inline-block;
   vertical-align: middle;
   max-width: 90%;
-  // width: 100%;
-  // height: 100%;
+  z-index: 99;
 
   img {
     display: block;
@@ -83,29 +82,7 @@ export default {
     height: auto;
     max-width: 100%;
     max-height: 60vh;
-    // position: absolute;
-    z-index: 100;
-    // top: 25vh;
-    // left: 80vh;
   }
-
-  // .masthead-carousel {
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   z-index: 99;
-
-  //   .carousel {
-  //     width: 100%;
-  //     height: 100%;
-  //     padding: 0;
-  //   }
-  // }
-}
-
-
-.masthead-image .VueCarousel-pagination {
-  height: 0px !important;
 }
 
 .masthead-action {
@@ -114,7 +91,7 @@ export default {
   left: 0;
   width: 100%;
   text-align: center;
-  z-index: 99999;
+  z-index: 99;
 }
 .masthead-button {
   display: inline-block;
@@ -153,5 +130,10 @@ export default {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   animation: jackrose-hero-button 2s ease-in-out 0s infinite;
+}
+.masthead-carousel {
+  margin-top: -100vh;
+  height: 100vh;
+  width: 100vw;
 }
 </style>

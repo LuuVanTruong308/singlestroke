@@ -16,7 +16,7 @@
       </div>
 
       <masonry
-        :cols="{default: 4, 1000: 3, 700: 2, 400: 1}"
+        :cols="{default: 4, 1170: 3, 768: 2, 460: 1}"
         :gutter="{default: '30px', 700: '15px'}"
         class="masonry--wrapper"
       >

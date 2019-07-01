@@ -27,7 +27,6 @@ Vue.use(VueGoogleMaps, {
 });
 
 Vue.use(VueMasonry)
-
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

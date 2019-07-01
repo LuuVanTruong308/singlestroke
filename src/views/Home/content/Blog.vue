@@ -4,9 +4,9 @@
       <p class="title">Our Blog</p>
     </div>
 
-    <div class="list-blog">
-      <div v-for="blog in blogs" :key="blog.id" class="blog">
-        <div data-aos="fade-up">
+    <div data-aos="fade-up">
+      <div class="list-blog">
+        <div v-for="blog in blogs" :key="blog.id" class="blog">
           <div class="image" :style="{ backgroundImage: 'url(' + blog.img + ')' }"></div>
           <div class="title">{{ blog.title }}</div>
           <div class="des">{{ blog.des }}</div>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="more" data-aos="fade-up" data-aos-delay="500">
+    <div class="more" data-aos="fade-up" data-aos-delay="300">
       <span class="more-blog"> More Blog Posts <i class="fa fa-angle-right"></i></span>
     </div>
   </div>
