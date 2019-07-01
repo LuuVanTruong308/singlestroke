@@ -11,7 +11,7 @@
     <Registration :registration="dataHome.registration"/>
     <Supporter :support="dataHome.supporter"/>
     <Quote :quote="dataHome.quote"/>
-    <Moments id="gallery" :moment="dataHome.moment"/>
+    <Moments id="gallery"/>
     <Blog :blogs="dataHome.blogs"/>
     <Footer :dataFooter="dataHome.footer"/>
   </div>

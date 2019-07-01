@@ -4,10 +4,10 @@
       <p class="title">Captured Moments</p>
     </div>
 
-    <div v-if="moment" data-aos="fade-up">
+    <div data-aos="fade-up">
       <div class="options">
         <div
-          v-for="(item, index) in moment.actions"
+          v-for="(item, index) in actions"
           :key="index"
           class="option"
           @click="checkTypeImg(item.type)"
@@ -33,35 +33,92 @@ export default {
   name: "moments",
   data() {
     return {
+      actions: [
+        {
+          type: "all",
+          text: "ALL PHOTOS"
+        },
+        {
+          type: "Engagement",
+          text: "Engagement"
+        },
+        {
+          type: "Wedding",
+          text: "Pre-Wedding"
+        },
+        {
+          type: "Friends",
+          text: "With Friends"
+        }
+      ],
+      list_img: [
+        {
+          type: 1,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery5-540x737.jpg",
+          category: "Engagement"
+        },
+        {
+          type: 0,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery6-540x398.jpg",
+          category: "Engagement"
+        },
+        {
+          type: 0,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery1.jpg",
+          category: "Engagement"
+        },
+        {
+          type: 1,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery3.jpg",
+          category: "Wedding"
+        },
+        {
+          type: 1,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery4.jpg",
+          category: "Wedding"
+        },
+        {
+          type: 0,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery7.jpg",
+          category: "Friends"
+        },
+        {
+          type: 1,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery2.jpg",
+          category: "Friends"
+        },
+        {
+          type: 0,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery8.jpg",
+          category: "Friends"
+        }
+      ],
       filter: "all",
       list: []
     }
   },
-
-  props: {
-    moment: {
-      type: Object,
-      default: () => {}
-    }
-  },
-
   watch: {
     filter: function(type) {
-      this.list = this.moment.list_img
+      this.list = this.list_img
       if (type === "Engagement")
-        this.list = this.moment.list_img.filter(el => el.category === "Engagement")
+        this.list = this.list_img.filter(el => el.category === "Engagement")
       if (type === "Wedding")
-        this.list = this.moment.list_img.filter(el => el.category === "Wedding")
+        this.list = this.list_img.filter(el => el.category === "Wedding")
       if (type === "Friends")
-        this.list = this.moment.list_img.filter(el => el.category === "Friends")
+        this.list = this.list_img.filter(el => el.category === "Friends")
     }
   },
-
-  created() {
-    this.list = this.moment.list_img
-    console.log('list moment', this.list)
+  mounted() {
+    this.list = this.list_img
   },
-
   methods: {
     checkTypeImg(type) {
       this.filter = type
@@ -74,14 +131,12 @@ export default {
   width: auto;
   height: 850px;
   background-size: cover;
-
   .header {
     font-size: 14px;
     line-height: 1.85;
     color: #888;
     text-align: center;
     margin-top: 100px;
-
     .title {
       color: #dcc8b4;
       font-family: "Alex Brush";
@@ -91,12 +146,10 @@ export default {
       letter-spacing: 0;
     }
   }
-
   .options {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-
     .option {
       margin: 0.25em 1em;
       padding: 0.25em 0;
@@ -109,42 +162,35 @@ export default {
       text-transform: uppercase;
       cursor: pointer;
     }
-
     .action {
       border-bottom: 2px solid #b4d2c8;
     }
   }
-
   .list-img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     max-height: 600px;
-
     @for $i from 1 through 36 {
       img:nth-child(#{$i}) {
         $h: (random(355) + 180) + px;
         height: $h;
       }
     }
-
     .img {
       width: 250px;
       background-size: cover;
       margin: 15px;
     }
-
     .small {
       height: 180px;
     }
-
     .big {
       height: 355px;
     }
   }
 }
-
 @media screen and (min-width: 1280px) {
   .moments {
     width: 1170px;
