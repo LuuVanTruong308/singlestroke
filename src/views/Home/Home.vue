@@ -66,7 +66,7 @@ export default {
   },
 
   methods: {
-    async getInforBasicUser() {
+    getInforBasicUser() {
       apiHome.getInfor().then((res) => {
         this.dataHome = res.data
       })

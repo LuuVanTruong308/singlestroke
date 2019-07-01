@@ -13,6 +13,7 @@ import Vuetify from 'vuetify'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import VueMasonry from 'vue-masonry-css'
 
 Vue.use(Vuetify, {
  iconfont: 'fa'
@@ -25,6 +26,7 @@ Vue.use(VueGoogleMaps, {
   }
 });
 
+Vue.use(VueMasonry)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

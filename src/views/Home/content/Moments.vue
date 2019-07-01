@@ -1,5 +1,5 @@
 <template>
-  <div class="row moments">
+  <div class="moments">
     <div class="header">
       <p class="title">Captured Moments</p>
     </div>
@@ -15,15 +15,19 @@
         >{{ item.text }}</div>
       </div>
 
-      <div class="list-img">
+      <masonry
+        :cols="{default: 4, 1170: 3, 768: 2, 460: 1}"
+        :gutter="{default: '30px', 700: '15px'}"
+        class="masonry--wrapper"
+      >
         <div
           v-for="(item, index) in list"
           :key="index"
-          :style="{ backgroundImage: 'url(' + item.img + ')' }"
-          :class="(item.type === 0 ? 'small' : 'big')"
-          class="img"
-        ></div>
-      </div>
+          class="masonry-image--wrapper"
+        >
+          <img :src="item.img" alt="" class="masonry-image">
+        </div>
+      </masonry>
     </div>
   </div>
 </template>
@@ -67,37 +71,37 @@ export default {
         {
           type: 0,
           img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery1.jpg",
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery4.jpg",
           category: "Engagement"
         },
         {
           type: 1,
           img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery3.jpg",
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery8.jpg",
           category: "Wedding"
         },
         {
           type: 1,
           img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery4.jpg",
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery7.jpg",
           category: "Wedding"
         },
         {
           type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery7.jpg",
-          category: "Friends"
-        },
-        {
-          type: 1,
           img:
             "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery2.jpg",
           category: "Friends"
         },
         {
+          type: 1,
+          img:
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery1.jpg",
+          category: "Friends"
+        },
+        {
           type: 0,
           img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery8.jpg",
+            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery3.jpg",
           category: "Friends"
         }
       ],
@@ -129,7 +133,7 @@ export default {
 <style lang="scss" scoped>
 .moments {
   width: auto;
-  height: 850px;
+  margin-bottom: 60px;
   background-size: cover;
   .header {
     font-size: 14px;
@@ -166,6 +170,18 @@ export default {
       border-bottom: 2px solid #b4d2c8;
     }
   }
+
+  .masonry--wrapper {
+    justify-content: center;
+  }
+
+  .masonry-image {
+    width: 100%;
+    &--wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
   .list-img {
     display: flex;
     flex-wrap: wrap;
@@ -194,7 +210,7 @@ export default {
 @media screen and (min-width: 1280px) {
   .moments {
     width: 1170px;
-    margin: 0 auto;
+    margin: 60px auto;
   }
 }
 </style>

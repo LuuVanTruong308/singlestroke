@@ -4,15 +4,17 @@
       <p class="title">Our Blog</p>
     </div>
 
-    <div class="list-blog">
-      <div v-for="blog in blogs" :key="blog.id" class="blog">
-        <div class="image" :style="{ backgroundImage: 'url(' + blog.img + ')' }"></div>
-        <div class="title">{{ blog.title }}</div>
-        <div class="des">{{ blog.des }}</div>
+    <div data-aos="fade-up">
+      <div class="list-blog">
+        <div v-for="blog in blogs" :key="blog.id" class="blog">
+          <div class="image" :style="{ backgroundImage: 'url(' + blog.img + ')' }"></div>
+          <div class="title">{{ blog.title }}</div>
+          <div class="des">{{ blog.des }}</div>
+        </div>
       </div>
     </div>
-    
-    <div class="more">
+
+    <div class="more" data-aos="fade-up" data-aos-delay="300">
       <span class="more-blog"> More Blog Posts <i class="fa fa-angle-right"></i></span>
     </div>
   </div>
@@ -68,7 +70,7 @@ export default {
       .image {
         width: 100%;
         height: 250px;
-        background-size: cover; 
+        background-size: cover;
         margin-bottom: 30px;
       }
 
@@ -85,7 +87,7 @@ export default {
         line-height: 1.85;
         display: -webkit-box;
         -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         overflow: hidden;
       }
     }
