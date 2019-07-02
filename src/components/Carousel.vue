@@ -10,8 +10,7 @@
       :autoplayHoverPause="true"
     >
       <slide v-for="slide in sliders" :key="slide.id">
-        <div v-if="!image"> {{ slide.quote }} </div>
-        <img v-else :src="slide.img">
+        <div class="quote-content"> {{ slide.quote }} </div>
       </slide>
     </carousel>
   </div>
@@ -63,6 +62,21 @@ export default {
   &--active {
     background-color: #ffffff !important;
     outline: none !important;
+  }
+}
+.quote-content {
+  width: 992px;
+  margin: 0 auto;
+  line-height: 42px;
+}
+@media (min-width: 768px) {
+  .quote-content {
+    width: 768px;
+  }
+}
+@media (max-width: 767px) {
+  .quote-content {
+    width: 100%;
   }
 }
 </style>
