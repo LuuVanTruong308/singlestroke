@@ -26,9 +26,12 @@
             <div class="menu-primary-container">
               <ul id="primary-menu" class="menu" style="max-height: 693.6px;">
                 <li v-for="(item, index) in listMenu" :key="index" :id="index" class="menu-item">
-                  <a :href="item.link">
+                  <a v-if="!item.router" :href="item.link">
                     {{ item.name }}
                   </a>
+                  <router-link v-else :to="item.link">
+                    {{ item.name }}
+                  </router-link>
                 </li>
               </ul>
             </div>
