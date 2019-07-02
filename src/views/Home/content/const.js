@@ -21,8 +21,8 @@ export const MENUBAR = [
     router: false
   }, {
     name: 'invitation',
-    link: '/invitation',
-    router: false
+    link: '/',
+    router: true
   }
 ]
 

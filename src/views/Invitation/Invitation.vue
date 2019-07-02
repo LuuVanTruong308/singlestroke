@@ -9,7 +9,7 @@
         <p class="text">Finally decided to "tie the knot" on</p>
         <p class="time-location">{{ invitation.time }}<br>{{ invitation.location }}</p>
 
-        <p class="move-home"><router-link to="/"> View More Details </router-link></p>
+        <p class="move-home"><router-link to="/wedding-detail"> View More Details </router-link></p>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'invitation',
-  
+
   components: {
   },
 
@@ -29,7 +29,7 @@ export default {
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2016/10/invitation-logo.png',
         time: 'Sunday, 14 February 2016',
         location: 'Kuta, Bali, Indonesia'
-      } 
+      }
     }
   },
 }
@@ -43,7 +43,7 @@ export default {
   height: auto;
   display: flex;
   justify-content: center;
-  background-size: cover; 
+  background-size: cover;
 
   .content {
     width: 970px;
