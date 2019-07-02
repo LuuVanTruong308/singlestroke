@@ -132,15 +132,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .moments {
-  width: auto;
   margin-bottom: 60px;
   background-size: cover;
+  overflow: hidden;
   .header {
     font-size: 14px;
     line-height: 1.85;
     color: #888;
     text-align: center;
-    margin-top: 100px;
     .title {
       color: #dcc8b4;
       font-family: "Alex Brush";

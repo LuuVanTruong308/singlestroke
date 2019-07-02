@@ -21,6 +21,7 @@
     <div class="masthead-carousel">
       <agile-slider :sliders="dataHeader.list_img_header" />
     </div>
+    <div class="hero-slide-overlay"></div>
   </div>
 </template>
 
@@ -67,6 +68,15 @@ export default {
       display: table;
     }
   }
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(130, 160, 150, 0.3);
 }
 
 .masthead-image {
