@@ -12,7 +12,7 @@
     <Supporter :support.sync="dataHome.supporter"/>
     <Quote :quote.sync="dataHome.quote"/>
     <Moments id="gallery"/>
-    <Blog :blogs.sync="dataHome.blogs"/>
+    <Blog :blogs.sync="dataHome.blogs" id="blog" />
     <Footer :dataFooter.sync="dataHome.footer"/>
   </div>
 </template>
