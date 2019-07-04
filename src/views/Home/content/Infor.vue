@@ -1,7 +1,7 @@
 <template>
   <div class="infors" id="groom&bride">
     <div class="header">
-      <p class="title">Groom &amp; Bride</p>
+      <p class="title">Chú rể &amp; Cô dâu</p>
     </div>
 
     <div data-aos="fade-up">
@@ -94,7 +94,7 @@ export default {
 
     .title {
       color: #dcc8b4;
-      font-family: "Alex Brush";
+      font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
       line-height: 0;

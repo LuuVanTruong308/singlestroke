@@ -4,12 +4,12 @@
       <div class="invitation-inner">
         <img :src="invitation.img" alt="j&r" class="image">
         <div class="header">
-          <p class="title">Jack Wilson &amp; Rose Marie</p>
+          <p class="title">Tuấn Phan &amp; Vĩ Thanh</p>
         </div>
-        <p class="text">Finally decided to "tie the knot" on</p>
+        <p class="text">Hôn lễ sẽ được tổ chức vào</p>
         <p class="time-location">{{ invitation.time }}<br>{{ invitation.location }}</p>
 
-        <p class="move-home"><router-link to="/wedding-detail"> View More Details </router-link></p>
+        <p class="move-home"><router-link to="/wedding-detail"> Chi tiết đám cưới </router-link></p>
       </div>
     </div>
   </div>
@@ -27,8 +27,8 @@ export default {
       invitation: {
         backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/invitation-bg.jpg',
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2016/10/invitation-logo.png',
-        time: 'Sunday, 14 February 2016',
-        location: 'Kuta, Bali, Indonesia'
+        time: 'Chủ nhật,Ngày 14 Tháng 2 Năm 2016 (Tức ngày: 13 Tháng 5 Năm Kỷ Hợi)' ,
+        location: 'Nhà Trai: Thôn xxxx Xã yyyy, Hoài Đức, Hà Nội'
       }
     }
   },
@@ -68,7 +68,7 @@ export default {
 
         .title {
           color: $title-color;
-          font-family: "Alex Brush";
+          font-family: "Dancing Script";
           font-weight: normal;
           font-size: 400%;
           line-height: 0;

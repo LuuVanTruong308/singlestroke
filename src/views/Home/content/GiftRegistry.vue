@@ -46,7 +46,7 @@ export default {
 
     .title {
       color: #dcc8b4;
-      font-family: "Alex Brush";
+      font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
       line-height: 0;

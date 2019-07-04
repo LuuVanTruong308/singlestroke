@@ -16,7 +16,7 @@
       </div>
 
       <div class="header">
-        <p class="title">Are getting married</p>
+        <p class="title">Hôn lễ được tổ chức vào hồi</p>
         <p>{{ avarta.time }} - {{ avarta.location }}</p>
       </div>
     </div>
@@ -26,7 +26,7 @@
 <script>
 export default {
   name: 'jackrose',
-  
+
   props: {
     avarta: {
       type: Object,
@@ -70,7 +70,7 @@ export default {
 
     .title {
       color: #dcc8b4;
-      font-family: "Alex Brush";
+      font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
       line-height: 0;

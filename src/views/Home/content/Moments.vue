@@ -1,7 +1,7 @@
 <template>
   <div class="moments">
     <div class="header">
-      <p class="title">Captured Moments</p>
+      <p class="title">Khoảnh khắc của chúng tôi</p>
     </div>
 
     <div data-aos="fade-up">
@@ -40,19 +40,19 @@ export default {
       actions: [
         {
           type: "all",
-          text: "ALL PHOTOS"
+          text: "Tất cả"
         },
         {
           type: "Engagement",
-          text: "Engagement"
+          text: "Ảnh cưới"
         },
         {
           type: "Wedding",
-          text: "Pre-Wedding"
+          text: "Ăn hỏi"
         },
         {
           type: "Friends",
-          text: "With Friends"
+          text: "Cùng bạn bè"
         }
       ],
       list_img: [
@@ -142,7 +142,7 @@ export default {
     text-align: center;
     .title {
       color: #dcc8b4;
-      font-family: "Alex Brush";
+      font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
       line-height: 0;

@@ -3,7 +3,7 @@
     <h2
       class="event-section-heading typography-section-heading"
       style="color: #c8b4a0"
-    >When &amp; Where</h2>
+    >Khi nào &amp; Ở đâu</h2>
     <div data-aos="fade-up">
       <div class="wedding">
         <div v-for="(item, index) in events" :key="index" class="wedding-item">
@@ -40,7 +40,7 @@ export default {
   margin: 0;
 }
 .typography-section-heading {
-  font-family: "Alex Brush";
+  font-family: "Dancing Script";
   font-size: 400%;
   font-style: normal;
   font-weight: normal;
