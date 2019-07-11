@@ -45,7 +45,7 @@ export default {
   .infor {
     display: flex;
     justify-content: center;
-    height: 370px;
+    height: auto;
 
     .infor-img {
       width: 100%;
@@ -127,6 +127,22 @@ export default {
 @media (min-width: 1025px) and (max-width: 1280px) {
   .infors {
     width: 1100px;
+  }
+}
+
+@media screen and (max-width: 519px){
+  .infors {
+    .infor {
+      flex-direction: column;
+
+      .infor-img {
+        height: 384px;
+      }
+    }
+
+    .infor:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
   }
 }
 </style>

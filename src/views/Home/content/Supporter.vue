@@ -70,4 +70,20 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 519px){
+  .suport {
+    .wrapper-support {
+      .header {
+        .title {
+          font-size: 300%;
+        }
+      }
+
+      .list-image {
+        flex-direction: column;
+      }
+    }
+  }
+}
 </style>

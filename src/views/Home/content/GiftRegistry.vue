@@ -74,4 +74,14 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 519px){
+  .align-center-giftRegistry {
+    .header {
+      .title {
+        font-size: 300%;
+      }
+    }
+  }
+}
 </style>

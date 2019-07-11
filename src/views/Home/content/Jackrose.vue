@@ -17,7 +17,7 @@
 
       <div class="header">
         <p class="title">Hôn lễ được tổ chức vào hồi</p>
-        <p>{{ avarta.time }} - {{ avarta.location }}</p>
+        <p class="calender">{{ avarta.time }} - {{ avarta.location }}</p>
       </div>
     </div>
   </div>
@@ -53,6 +53,14 @@ export default {
       margin-top: 65px;
     }
 
+    @media screen and (max-width: 519px){
+    .img-and {
+      width: 100%;
+      height: auto;
+      margin: 2em 0;
+    }
+  }
+
     .name {
       margin-top: 20px;
       font-style: italic;
@@ -77,5 +85,28 @@ export default {
       letter-spacing: 0;
     }
   }
+}
+
+@media screen and (max-width: 519px){
+  .wrapper-jackrose {
+    .header {
+      .title {
+        font-size: 300%;
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      .calender {
+        font-size: 130%;
+        margin-top: 10px;
+      }
+    }
+
+    .jackrose {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+  }      
 }
 </style>

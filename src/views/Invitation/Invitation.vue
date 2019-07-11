@@ -7,7 +7,7 @@
           <p class="title">Tuấn Phan &amp; Vĩ Thanh</p>
         </div>
         <p class="text">Hôn lễ sẽ được tổ chức vào</p>
-        <p class="time-location">{{ invitation.time }}<br>{{ invitation.location }}</p>
+        <p class="time-location">{{ invitation.calender }}<br>({{invitation.lunaCalender}})<br>{{ invitation.location }}</p>
 
         <p class="move-home"><router-link to="/wedding-detail"> Chi tiết đám cưới </router-link></p>
       </div>
@@ -27,7 +27,8 @@ export default {
       invitation: {
         backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/invitation-bg.jpg',
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2016/10/invitation-logo.png',
-        time: 'Chủ nhật,Ngày 14 Tháng 2 Năm 2016 (Tức ngày: 13 Tháng 5 Năm Kỷ Hợi)' ,
+        calender: 'Chủ nhật,Ngày 14 Tháng 2 Năm 2016 ' ,
+        lunaCalender: 'Tức ngày: 13 Tháng 5 Năm Kỷ Hợi',
         location: 'Nhà Trai: Thôn xxxx Xã yyyy, Hoài Đức, Hà Nội'
       }
     }
@@ -39,7 +40,6 @@ export default {
 @import '../../styles/variables.scss';
 
 .invitation {
-  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -51,6 +51,7 @@ export default {
     height: auto;
     margin: 90px 0;
     padding: 3%;
+    opacity: 0.93;
 
     .invitation-inner {
       border: 4px double #ddd;
@@ -83,6 +84,8 @@ export default {
         color: $primary-menu-color;
       }
 
+     
+
       .time-location {
         color: $primary-menu-color;
         margin: 30px 0;
@@ -102,6 +105,25 @@ export default {
           text-decoration: none;
           color: white;
           font-style: $font-des;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 519px){
+  .invitation {
+    .content {
+      .invitation-inner {
+        .text {
+          font-size: 130%;
+        }
+
+        .header {
+          .title {
+            font-size: 300%;
+            line-height: 1.1;
+          }
         }
       }
     }

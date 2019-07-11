@@ -212,4 +212,19 @@ export default {
     margin: 60px auto;
   }
 }
+
+@media screen and (max-width: 519px){
+  .moments {
+    .header {
+      .title {
+        font-size: 300%;
+      }
+    }
+
+    .masonry--wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
 </style>

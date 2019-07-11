@@ -107,4 +107,26 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 519px){
+  .blogs {
+    .header {
+      .title {
+        font-size: 300%;
+      }
+    }
+
+    .list-blog {
+      flex-direction: column;
+      margin: 0;
+      padding: 0 15px;
+
+      .blog {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 </style>
