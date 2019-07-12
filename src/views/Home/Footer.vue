@@ -45,5 +45,8 @@ export default {
     font-style: italic;
     font-size: 12px;
   }
+  @media screen and (max-width: 519px){
+    background-position: 30% 50%;
+  }
 }
 </style>

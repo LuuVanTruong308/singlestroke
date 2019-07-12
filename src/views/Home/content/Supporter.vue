@@ -42,6 +42,7 @@ export default {
       text-align: center;
 
       .title {
+        display: inline;
         color: #dcc8b4;
         font-family: "Dancing Script";
         font-weight: normal;
@@ -66,6 +67,22 @@ export default {
         text-transform: uppercase;
         font-style: italic;
         color: #888;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 519px){
+  .suport {
+    .wrapper-support {
+      .header {
+        .title {
+          font-size: 300%;
+        }
+      }
+
+      .list-image {
+        flex-direction: column;
       }
     }
   }

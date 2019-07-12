@@ -50,7 +50,7 @@ export default {
       font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
-      line-height: 0;
+      line-height: 30px;
       letter-spacing: 0;
       display: block;
       padding-top: 60px;
@@ -104,6 +104,30 @@ export default {
       color: #ffffff;
       padding: 10px 20px;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 519px){
+  .blogs {
+    .header {
+      .title {
+        font-size: 300%;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .list-blog {
+      flex-direction: column;
+      margin: 0;
+      padding: 0 15px;
+
+      .blog {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+      }
     }
   }
 }

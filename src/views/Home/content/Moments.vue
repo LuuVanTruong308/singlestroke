@@ -145,7 +145,7 @@ export default {
       font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
-      line-height: 0;
+      line-height: 30px;
       letter-spacing: 0;
     }
   }
@@ -210,6 +210,21 @@ export default {
   .moments {
     width: 1170px;
     margin: 60px auto;
+  }
+}
+
+@media screen and (max-width: 519px){
+  .moments {
+    .header {
+      .title {
+        font-size: 300%;
+      }
+    }
+
+    .masonry--wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 </style>

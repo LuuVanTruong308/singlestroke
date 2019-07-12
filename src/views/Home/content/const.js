@@ -25,5 +25,3 @@ export const MENUBAR = [
     router: true
   }
 ]
-
-export const titleDiftRegistry = 'Gift Registry'

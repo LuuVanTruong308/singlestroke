@@ -7,7 +7,6 @@
     <Infor :inforProfile.sync="dataHome.infors"/>
     <Event id="when&where" :events.sync="dataHome.events"/>
     <MapHome :mapLocation="dataHome.mapLocation"/>
-    <GiftRegistry :giftRegistry.sync="dataHome.giftRegistry"/>
     <Registration :registration.sync="dataHome.registration"/>
     <Supporter :support.sync="dataHome.supporter"/>
     <Quote :quote.sync="dataHome.quote"/>
@@ -27,7 +26,6 @@ import Infor from './content/Infor'
 import Quote from './content/Quote'
 import Event from './content/event'
 import CountDownHome from './content/CountDownHome'
-import GiftRegistry from './content/GiftRegistry'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
 import Supporter from './content/Supporter'
@@ -47,7 +45,6 @@ export default {
     Quote,
     Event,
     CountDownHome,
-    GiftRegistry,
     Registration,
     Moments,
     Supporter,

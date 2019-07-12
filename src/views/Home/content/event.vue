@@ -109,4 +109,28 @@ export default {
     }
   }
 }
+@media screen and (max-width: 519px){
+  .typography-section-heading {
+    font-size: 300%;
+  }
+
+  .align-center {
+    .wedding {
+      flex-direction: column;
+
+      .wedding-item {
+        width: auto;
+
+        .wedding-item-time {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .wedding-item-icon {
+          top: 38%;
+        }
+      }
+    }
+  }
+}
 </style>
