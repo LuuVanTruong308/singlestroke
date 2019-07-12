@@ -4,7 +4,7 @@
       <div class="invitation-inner">
         <img :src="invitation.img" alt="j&r" class="image">
         <div class="header">
-          <p class="title">Tuấn Phan &amp; Vĩ Thanh</p>
+          <p class="title">Tuấn Phan &amp; Thanh Hằng</p>
         </div>
         <p class="text">Hôn lễ sẽ được tổ chức vào</p>
         <p class="time-location">{{ invitation.time }}<br>{{ invitation.location }}</p>
@@ -40,17 +40,20 @@ export default {
 
 .invitation {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-size: cover;
 
   .content {
+    display: table;
+    position: absolute;
     width: 970px;
     background-color: $primary-color;
-    height: auto;
-    margin: 90px 0;
-    padding: 3%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
 
     .invitation-inner {
       border: 4px double #ddd;
