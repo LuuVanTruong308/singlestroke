@@ -44,9 +44,14 @@
 
 <script>
 import { MENUBAR } from './const';
+import { Slide } from 'vue-burger-menu';
 
 export default {
   name: "menuBar",
+
+  components: {
+    Slide
+  },
 
   data() {
     return {
@@ -187,6 +192,16 @@ export default {
     & a:hover:after,
     & a.focus:after {
       background-color: #b4d2c8;
+    }
+  }
+}
+
+@media screen and (max-width: 519px){
+  .wrapper {
+    .header-navigation {
+      .menu-primary-container {
+        display: none;
+      }
     }
   }
 }

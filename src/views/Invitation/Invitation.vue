@@ -4,10 +4,17 @@
       <div class="invitation-inner">
         <img :src="invitation.img" alt="j&r" class="image">
         <div class="header">
-          <p class="title">Tuấn Phan &amp; Vĩ Thanh</p>
+          <span class="title">Tuấn Phan</span>
+          <span class="title"> &amp;</span>
+          <span class="title"> Minh Hằng</span>
         </div>
         <p class="text">Hôn lễ sẽ được tổ chức vào</p>
-        <p class="time-location">{{ invitation.calender }}<br>({{invitation.lunaCalender}})<br>{{ invitation.location }}</p>
+
+        <div class="invitation__infor">
+          <span class="invitation__calender">{{ invitation.calender }}</span>
+          <span class="invitation__luna-calender">({{ invitation.lunaCalender}})</span>
+          <span class="invitation__location">{{ invitation.location }}</span>
+        </div>
 
         <p class="move-home"><router-link to="/wedding-detail"> Chi tiết đám cưới </router-link></p>
       </div>
@@ -27,9 +34,9 @@ export default {
       invitation: {
         backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/invitation-bg.jpg',
         img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2016/10/invitation-logo.png',
-        calender: 'Chủ nhật,Ngày 14 Tháng 2 Năm 2016 ' ,
+        calender: 'Chủ nhật, ngày 28 tháng 7 năm 2019 ' ,
         lunaCalender: 'Tức ngày: 13 Tháng 5 Năm Kỷ Hợi',
-        location: 'Nhà Trai: Thôn xxxx Xã yyyy, Hoài Đức, Hà Nội'
+        location: 'Nhà trai: xóm Minh Đức, Thôn Đa Phúc, Xã Sài Sơn, Huyện Quốc Oai, TP Hà Nội'
       }
     }
   },
@@ -44,6 +51,27 @@ export default {
   display: flex;
   justify-content: center;
   background-size: cover;
+
+  &__calender {
+    color: $primary-menu-color;
+    font-size: $font-size-normal;
+    display: inline-block;
+  }
+
+  &__luna-calender {
+    @extend .invitation__calender;
+    margin-bottom: 15px;
+  }
+
+  &__location {
+    @extend .invitation__calender;
+    margin-bottom: 30px;
+  }
+
+  &__infor {
+    display: flex;
+    flex-direction: column;
+  }
 
   .content {
     width: 970px;
@@ -66,6 +94,7 @@ export default {
         font-size: $font-size-normal;
         line-height: 1.85;
         text-align: center;
+        margin-top: 50px;
 
         .title {
           color: $title-color;
@@ -74,7 +103,6 @@ export default {
           font-size: 400%;
           line-height: 0;
           letter-spacing: 0;
-          display: block;
           padding-top: 20px 0;
         }
       }
@@ -82,14 +110,6 @@ export default {
       .text {
         font-style: $font-des;
         color: $primary-menu-color;
-      }
-
-     
-
-      .time-location {
-        color: $primary-menu-color;
-        margin: 30px 0;
-        font-size: $font-size-normal;
       }
 
       .move-home {
@@ -120,6 +140,10 @@ export default {
         }
 
         .header {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+
           .title {
             font-size: 300%;
             line-height: 1.1;

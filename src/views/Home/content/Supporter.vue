@@ -77,6 +77,7 @@ export default {
       .header {
         .title {
           font-size: 300%;
+          line-height: inherit;
         }
       }
 
