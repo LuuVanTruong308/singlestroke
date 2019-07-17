@@ -47,7 +47,8 @@ export default {
 @import '../../styles/variables.scss';
 
 .invitation {
-  height: auto;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-size: cover;
@@ -74,12 +75,14 @@ export default {
   }
 
   .content {
+    display: table;
+    position: absolute;
     width: 970px;
     background-color: $primary-color;
-    height: auto;
-    margin: 90px 0;
-    padding: 3%;
-    opacity: 0.93;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
 
     .invitation-inner {
       border: 4px double #ddd;

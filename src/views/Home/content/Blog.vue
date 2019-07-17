@@ -114,6 +114,8 @@ export default {
       .title {
         font-size: 300%;
         line-height: inherit;
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
 

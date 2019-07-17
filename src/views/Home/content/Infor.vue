@@ -49,7 +49,6 @@ export default {
 
     .infor-img {
       width: 100%;
-      height: 100%;
       background-position: center center;
       background-size: cover;
       &.right {
