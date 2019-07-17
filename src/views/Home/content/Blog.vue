@@ -50,7 +50,7 @@ export default {
       font-family: "Dancing Script";
       font-weight: normal;
       font-size: 400%;
-      line-height: 0;
+      line-height: 30px;
       letter-spacing: 0;
       display: block;
       padding-top: 60px;

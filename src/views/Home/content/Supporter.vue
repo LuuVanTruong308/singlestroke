@@ -42,6 +42,7 @@ export default {
       text-align: center;
 
       .title {
+        display: inline;
         color: #dcc8b4;
         font-family: "Dancing Script";
         font-weight: normal;
