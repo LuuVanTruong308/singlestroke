@@ -9,7 +9,7 @@
       :option="Options"
     >
       <div class="slide" v-for="(slide, index) in listImageSlider" :key="index">
-        <img :src="slide.img" alt>
+        <img :src.sync="slide.sildeImage" alt>
       </div>
     </agile>
   </div>
@@ -32,15 +32,15 @@ export default {
       listImageSlider: [
         {
           id: 1,
-          img : '@/assets/images/slider/alider1.png'
+          sildeImage : '@/assets/images/slider/slider1.png'
         },
         {
           id: 2,
-          img : '@/assets/images/slider/alider2.png'
+          sildeImage : '@/assets/images/slider/slider2.png'
         },
         {
           id: 3,
-          img : '@/assets/images/slider/alider3.png'
+          sildeImage : '@/assets/images/slider/slider3.png'
         }
       ]
     }
