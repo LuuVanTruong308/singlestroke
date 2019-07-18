@@ -2,7 +2,7 @@
   <div class="home">
     <Header :dataHeader.sync="dataHome.header"/>
     <MenuBar id="navbar" />
-    <Profile :avarta.sync="dataHome.avatar"/>
+    <Profile :avatar.sync="dataHome.avatar"/>
     <CountDownHome v-if="dataHome.count_down" :time-count-down.sync="dataHome.count_down"/>
     <Infor :inforProfile.sync="dataHome.infors"/>
     <Event id="when&where" :events.sync="dataHome.events"/>
