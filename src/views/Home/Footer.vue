@@ -1,5 +1,6 @@
 <template>
-  <div v-if="dataFooter" class="home-footer" :style="{ backgroundImage: 'url(' + dataFooter.backgroup + ')' }">
+<!-- dataFooter.backgroup -->
+  <div v-if="dataFooter" class="home-footer" :style="{ backgroundImage: 'url(' + require(`@/assets/images/footer/footer.png`) + ')' }">
     <img :src="dataFooter.img" class="preloader-content">
     <p class="text">Copyright © {{ new Date().getFullYear() }} — designed by ToiLDA</p>
   </div>
@@ -29,6 +30,7 @@ export default {
   background-color: #ffffff;
   text-align: center;
   height: 525px;
+  background-position: center center;
 
   .preloader-content {
     position: relative;
@@ -44,9 +46,6 @@ export default {
     margin-top: 60px;
     font-style: italic;
     font-size: 12px;
-  }
-  @media screen and (max-width: 519px){
-    background-position: 30% 50%;
   }
 }
 </style>

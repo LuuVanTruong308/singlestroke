@@ -2,7 +2,7 @@
   <div class="map">
     <gmap-map
       :center="center"
-      :zoom="12"
+      :zoom="15"
       style="width:100%;  height: 460px;"
     >
       <gmap-marker
@@ -20,21 +20,11 @@ export default {
   name: 'Map',
   data() {
     return {
-      center: { lat: 21.012621, lng: 105.812477 },
+      center: { lat: 21.024040, lng: 105.646100 },
       markers: [{
         position: {
-          lat: 21.022621,
-          lng: 105.812477
-        }
-      },{
-        position: {
-          lat: 21.013621,
-          lng: 105.812477
-        }
-      },{
-        position: {
-          lat: 21.012621,
-          lng: 105.821477
+          lat: 21.024040,
+          lng: 105.646100
         }
       }],
       places: [],

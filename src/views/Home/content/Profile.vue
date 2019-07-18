@@ -3,14 +3,14 @@
     <div v-if="avatar" data-aos="fade-up">
       <div class="profile">
         <div>
-          <img :src="avatar.imgGroome">
+          <img class="profile-image" src="@/assets/images/profile/jack.png">
           <div class="name"> {{ avatar.groomName }}</div>
         </div>
         <div class="img-and">
           <img :src="avatar.imgAnd">
         </div>
         <div>
-          <img :src="avatar.imgBrigde">
+          <img class="profile-image" src="@/assets/images/profile/rose.png">
           <div class="name">{{ avatar.brigdeName }}</div>
         </div>
       </div>
@@ -84,6 +84,13 @@ export default {
       line-height: 0;
       letter-spacing: 0;
     }
+  }
+
+  .profile-image {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-size: auto;
   }
 }
 

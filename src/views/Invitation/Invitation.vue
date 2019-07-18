@@ -1,5 +1,5 @@
 <template>
-  <div class="invitation" :style="{ backgroundImage: 'url(' + invitation.backgroup + ')' }">
+  <div class="invitation" :style="{ backgroundImage: 'url(' + require(`@/assets/images/invitation/invitation.png`) + ')' }">
     <div class="content">
       <div class="invitation-inner">
         <img :src="invitation.img" alt="j&r" class="image">
