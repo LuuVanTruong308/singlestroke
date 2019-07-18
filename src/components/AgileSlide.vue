@@ -8,8 +8,14 @@
       :autoplaySpeed="20000"
       :option="Options"
     >
-      <div class="slide" v-for="(slide, index) in listImageSlider" :key="index">
-        <img :src.sync="slide.sildeImage" alt>
+      <div class="slide">
+        <img src="@/assets/images/slider/slider3.png" alt>
+      </div>
+      <div class="slide">
+        <img src="@/assets/images/slider/slider1.png" alt>
+      </div>
+      <div class="slide">
+        <img src="@/assets/images/slider/slider2.png" alt>
       </div>
     </agile>
   </div>
@@ -28,21 +34,7 @@ export default {
   },
   data() {
     return {
-      Options: {},
-      listImageSlider: [
-        {
-          id: 1,
-          sildeImage : '@/assets/images/slider/slider1.png'
-        },
-        {
-          id: 2,
-          sildeImage : '@/assets/images/slider/slider2.png'
-        },
-        {
-          id: 3,
-          sildeImage : '@/assets/images/slider/slider3.png'
-        }
-      ]
+      Options: {}
     }
   },
 

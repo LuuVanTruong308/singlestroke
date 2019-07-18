@@ -6,7 +6,7 @@
 
     <div data-aos="fade-up">
       <div class="infor" v-for="(info, index) in inforProfile" :key="index">
-        <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + info.img + ')' }"></div>
+        <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + require(`@/assets/images/profile/${info.img}.png`) + ')' }"></div>
         <div class="infor-flex">
           <h4 class="name">{{ info.type }} {{ info.name }}</h4>
           <p class="description">{{ info.description }}</p>

@@ -10,7 +10,7 @@
           <img :src="avatar.imgAnd">
         </div>
         <div>
-          <img class="profile-image" src="@/assets/images/profile/rose.jpg">
+          <img class="profile-image" src="@/assets/images/profile/rose.png">
           <div class="name">{{ avatar.brigdeName }}</div>
         </div>
       </div>
