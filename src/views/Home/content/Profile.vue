@@ -1,23 +1,23 @@
 <template>
   <div class="wrapper-profile">
-    <div v-if="avarta" data-aos="fade-up">
+    <div v-if="avatar" data-aos="fade-up">
       <div class="profile">
         <div>
-          <img :src="avarta.imgGroome">
-          <div class="name"> {{ avarta.groomName }}</div>
+          <img :src="avatar.imgGroome">
+          <div class="name"> {{ avatar.groomName }}</div>
         </div>
         <div class="img-and">
-          <img :src="avarta.imgAnd">
+          <img :src="avatar.imgAnd">
         </div>
         <div>
-          <img :src="avarta.imgBrigde">
-          <div class="name">{{ avarta.brigdeName }}</div>
+          <img :src="avatar.imgBrigde">
+          <div class="name">{{ avatar.brigdeName }}</div>
         </div>
       </div>
 
       <div class="header">
         <p class="title">Hôn lễ được tổ chức vào hồi</p>
-        <p class="calender">{{ avarta.time }} - {{ avarta.location }}</p>
+        <p class="calender">{{ avatar.time }} - {{ avatar.location }}</p>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
   name: 'profile',
 
   props: {
-    avarta: {
+    avatar: {
       type: Object,
       default: () => {}
     }
