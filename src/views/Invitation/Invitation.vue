@@ -57,6 +57,7 @@ export default {
     color: $primary-menu-color;
     font-size: $font-size-normal;
     display: inline-block;
+    line-height: 25px;
   }
 
   &__luna-calender {
@@ -137,9 +138,14 @@ export default {
 @media screen and (max-width: 519px){
   .invitation {
     .content {
+      width: 90%;
       .invitation-inner {
         .text {
           font-size: 130%;
+        }
+
+        .move-home {
+          margin-top: 20px;
         }
 
         .header {
