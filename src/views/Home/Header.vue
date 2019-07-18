@@ -76,7 +76,7 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(130, 160, 150, 0.3);
+  background-color: rgba(130, 160, 150, 0.4);
 }
 
 .masthead-image {

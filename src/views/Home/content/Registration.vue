@@ -1,5 +1,5 @@
 <template>
-  <div v-if="registration" class="wrapper-registration" :style="{ backgroundImage: 'url(' + registration.img + ')' }">
+  <div v-if="registration" class="wrapper-registration">
   </div>
 </template>
 
@@ -21,5 +21,6 @@ export default {
   height: 935px;
   background-size: cover;
   background-attachment: fixed;
+  background-image: url('../../../assets/rsvp.png')
 }
 </style>
