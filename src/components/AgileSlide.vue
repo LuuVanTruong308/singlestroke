@@ -8,7 +8,7 @@
       :autoplaySpeed="20000"
       :option="Options"
     >
-      <div class="slide" v-for="(slide, index) in sliders" :key="index">
+      <div class="slide" v-for="(slide, index) in listImageSlider" :key="index">
         <img :src="slide.img" alt>
       </div>
     </agile>
@@ -28,8 +28,26 @@ export default {
   },
   data() {
     return {
-      Options: {}
+      Options: {},
+      listImageSlider: [
+        {
+          id: 1,
+          img : '@/assets/images/slider/alider1.png'
+        },
+        {
+          id: 2,
+          img : '@/assets/images/slider/alider2.png'
+        },
+        {
+          id: 3,
+          img : '@/assets/images/slider/alider3.png'
+        }
+      ]
     }
+  },
+
+  created() {
+    console.log(this.sliders)
   }
 }
 </script>
