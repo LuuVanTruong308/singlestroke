@@ -1,5 +1,5 @@
 <template>
-  <div class="suport">
+  <div class="support">
     <div v-for="(item, index) in support" :key="index" class="wrapper-support">
       <div class="header">
         <p class="title">{{ item.title }}</p>
@@ -30,7 +30,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.suport {
+.support {
   margin: 50px 0;
 
   .wrapper-support {
@@ -73,7 +73,7 @@ export default {
 }
 
 @media screen and (max-width: 519px){
-  .suport {
+  .support {
     .wrapper-support {
       .header {
         .title {

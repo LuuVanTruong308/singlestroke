@@ -30,6 +30,7 @@ export default {
   .count-down {
     width: 400px;
     margin: 0 auto;
+    justify-content: center;
   }
 }
 </style>

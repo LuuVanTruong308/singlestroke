@@ -2,7 +2,7 @@
   <div class="home">
     <Header :dataHeader.sync="dataHome.header"/>
     <MenuBar id="navbar" />
-    <Jackrose :avarta.sync="dataHome.avatar"/>
+    <Profile :avarta.sync="dataHome.avatar"/>
     <CountDownHome v-if="dataHome.count_down" :time-count-down.sync="dataHome.count_down"/>
     <Infor :inforProfile.sync="dataHome.infors"/>
     <Event id="when&where" :events.sync="dataHome.events"/>
@@ -21,10 +21,10 @@ import Header from './Header'
 import Footer from './Footer'
 import MapHome from './content/MapHome'
 import MenuBar from './content/Menubar'
-import Jackrose from './content/Jackrose'
+import Profile from './content/Profile'
 import Infor from './content/Infor'
 import Quote from './content/Quote'
-import Event from './content/event'
+import Event from './content/Event'
 import CountDownHome from './content/CountDownHome'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
@@ -40,7 +40,7 @@ export default {
     Footer,
     MapHome,
     MenuBar,
-    Jackrose,
+    Profile,
     Infor,
     Quote,
     Event,

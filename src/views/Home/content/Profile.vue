@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper-jackrose">
+  <div class="wrapper-profile">
     <div v-if="avarta" data-aos="fade-up">
-      <div class="jackrose">
+      <div class="profile">
         <div>
           <img :src="avarta.imgGroome">
           <div class="name"> {{ avarta.nameJack }}</div>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'jackrose',
+  name: 'profile',
 
   props: {
     avarta: {
@@ -37,11 +37,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper-jackrose {
+.wrapper-profile {
   margin: 100px 0;
   text-align: center;
 
-  .jackrose {
+  .profile {
     display: flex;
     justify-content: center;
     height: 310px;
@@ -88,7 +88,7 @@ export default {
 }
 
 @media screen and (max-width: 519px){
-  .wrapper-jackrose {
+  .wrapper-profile {
     .header {
       .title {
         font-size: 300%;
@@ -102,11 +102,11 @@ export default {
       }
     }
 
-    .jackrose {
+    .profile {
       display: flex;
       flex-direction: column;
       height: auto;
     }
-  }      
+  }
 }
 </style>

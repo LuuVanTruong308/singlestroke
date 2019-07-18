@@ -112,7 +112,7 @@ export default {
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  animation: jackrose-hero-button 2s ease-in-out 0s infinite;
+  animation: profile-hero-button 2s ease-in-out 0s infinite;
 }
 .masthead-button span {
   display: block;
@@ -124,7 +124,7 @@ export default {
   font-style: normal;
 }
 
-@keyframes jackrose-hero-button {
+@keyframes profile-hero-button {
   0% {
     transform: translate(0, 0);
   }
@@ -139,7 +139,7 @@ export default {
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  animation: jackrose-hero-button 2s ease-in-out 0s infinite;
+  animation: profile-hero-button 2s ease-in-out 0s infinite;
 }
 .masthead-carousel {
   margin-top: -100vh;

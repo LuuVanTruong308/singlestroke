@@ -120,7 +120,7 @@ export default {
 
   .content {
     width: auto;
-    margin-right: 30px;
+    margin-right: 20px;
     text-align: center;
     color: #888;
 

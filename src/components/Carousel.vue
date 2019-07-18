@@ -68,6 +68,7 @@ export default {
   width: 992px;
   margin: 0 auto;
   line-height: 42px;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .quote-content {
@@ -76,7 +77,7 @@ export default {
 }
 @media (max-width: 767px) {
   .quote-content {
-    width: 100%;
+    width: 90%;
   }
 }
 </style>

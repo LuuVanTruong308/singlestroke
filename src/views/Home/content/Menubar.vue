@@ -44,14 +44,9 @@
 
 <script>
 import { MENUBAR } from './const';
-import { Slide } from 'vue-burger-menu';
 
 export default {
   name: "menuBar",
-
-  components: {
-    Slide
-  },
 
   data() {
     return {
