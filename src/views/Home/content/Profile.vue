@@ -4,14 +4,14 @@
       <div class="profile">
         <div>
           <img :src="avarta.imgGroome">
-          <div class="name"> {{ avarta.nameJack }}</div>
+          <div class="name"> {{ avarta.groomName }}</div>
         </div>
         <div class="img-and">
           <img :src="avarta.imgAnd">
         </div>
         <div>
           <img :src="avarta.imgBrigde">
-          <div class="name">{{ avarta.nameRose }}</div>
+          <div class="name">{{ avarta.brigdeName }}</div>
         </div>
       </div>
 
