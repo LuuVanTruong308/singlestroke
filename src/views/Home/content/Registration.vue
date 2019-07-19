@@ -20,7 +20,11 @@ export default {
   width: auto;
   height: 935px;
   background-size: cover;
-  background-attachment: fixed;
-  background-image: url('../../../assets/rsvp.png')
+  background-image: url('../../../assets/rsvp.png');
+
+  @media screen and (max-width: 575px) {
+    height: 650px;
+    background-size: cover;
+  }
 }
 </style>

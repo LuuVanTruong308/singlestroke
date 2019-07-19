@@ -66,7 +66,7 @@ export default {
       .name {
         font-size: 120%;
         font-style: italic;
-        font-weight: 400;
+        font-weight: 500;
         text-transform: uppercase;
         color: #444;
         letter-spacing: .1em;

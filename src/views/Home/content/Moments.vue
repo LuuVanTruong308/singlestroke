@@ -5,16 +5,6 @@
     </div>
 
     <div data-aos="fade-up">
-      <div class="options">
-        <div
-          v-for="(item, index) in actions"
-          :key="index"
-          class="option"
-          @click="checkTypeImg(item.type)"
-          :class="(item.type === filter ? 'action' : '')"
-        >{{ item.text }}</div>
-      </div>
-
       <masonry
         :cols="{default: 4, 1170: 3, 768: 2, 460: 1}"
         :gutter="{default: '30px', 700: '15px'}"
@@ -25,7 +15,7 @@
           :key="index"
           class="masonry-image--wrapper"
         >
-          <img :src="item.img" alt="" class="masonry-image">
+          <img :src="require(`@/assets/gallery/${item.img}`)" alt="" class="masonry-image">
         </div>
       </masonry>
     </div>
@@ -37,96 +27,46 @@ export default {
   name: "moments",
   data() {
     return {
-      actions: [
-        {
-          type: "all",
-          text: "Tất cả"
-        },
-        {
-          type: "Engagement",
-          text: "Ảnh cưới"
-        },
-        {
-          type: "Wedding",
-          text: "Ăn hỏi"
-        },
-        {
-          type: "Friends",
-          text: "Cùng bạn bè"
-        }
-      ],
       list_img: [
         {
           type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery5-540x737.jpg",
-          category: "Engagement"
+          img: "gallery-1.png",
         },
         {
           type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery6-540x398.jpg",
-          category: "Engagement"
+          img: "gallery-8.png"
         },
         {
           type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery4.jpg",
-          category: "Engagement"
+          img: "gallery-3.png"
         },
         {
           type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery8.jpg",
-          category: "Wedding"
+          img: "gallery-4.png"
         },
         {
           type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery7.jpg",
-          category: "Wedding"
+          img: "gallery-5.png"
         },
         {
           type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery2.jpg",
-          category: "Friends"
+          img: "gallery-6.png"
         },
         {
           type: 1,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery1.jpg",
-          category: "Friends"
+          img: "gallery-7.png"
         },
         {
           type: 0,
-          img:
-            "http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/gallery3.jpg",
-          category: "Friends"
+          img: "gallery-2.png"
         }
       ],
       filter: "all",
       list: []
     }
   },
-  watch: {
-    filter: function(type) {
-      this.list = this.list_img
-      if (type === "Engagement")
-        this.list = this.list_img.filter(el => el.category === "Engagement")
-      if (type === "Wedding")
-        this.list = this.list_img.filter(el => el.category === "Wedding")
-      if (type === "Friends")
-        this.list = this.list_img.filter(el => el.category === "Friends")
-    }
-  },
   mounted() {
     this.list = this.list_img
-  },
-  methods: {
-    checkTypeImg(type) {
-      this.filter = type
-    }
   }
 }
 </script>

@@ -2,7 +2,7 @@
   <div class="invitation" :style="{ backgroundImage: 'url(' + require(`@/assets/images/invitation/invitation.png`) + ')' }">
     <div class="content">
       <div class="invitation-inner">
-        <img :src="invitation.img" alt="j&r" class="image">
+        <img :src="require(`@/assets/${invitation.img}`)" alt class="image">
         <div class="header">
           <span class="title">Tuấn Phan</span>
           <span class="title"> &amp;</span>
@@ -33,7 +33,7 @@ export default {
     return {
       invitation: {
         backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/invitation-bg.jpg',
-        img: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2016/10/invitation-logo.png',
+        img: 'hero-logo.png',
         calender: 'Chủ nhật, ngày 28 tháng 7 năm 2019 ' ,
         lunaCalender: 'Tức ngày: 13 Tháng 5 Năm Kỷ Hợi',
         location: 'Nhà trai: xóm Minh Đức, Thôn Đa Phúc, Xã Sài Sơn, Huyện Quốc Oai, TP Hà Nội'
@@ -54,6 +54,7 @@ export default {
   background-size: cover;
 
   &__calender {
+    font-family: 'Sriracha', cursive;
     color: $primary-menu-color;
     font-size: $font-size-normal;
     display: inline-block;
@@ -92,6 +93,8 @@ export default {
 
       .image {
         margin-top: 50px;
+        width: 250px;
+        filter: invert(.6);
       }
 
       .header {
@@ -112,11 +115,13 @@ export default {
       }
 
       .text {
+        font-family: 'Sriracha', cursive;
         font-style: $font-des;
         color: $primary-menu-color;
       }
 
       .move-home {
+        font-family: 'Sriracha', cursive;
         background-color: #b4d2c8;
         width: 200px;
         height: 30px;

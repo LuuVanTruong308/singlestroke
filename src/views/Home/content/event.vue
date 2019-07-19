@@ -7,11 +7,12 @@
     <div data-aos="fade-up">
       <div class="wedding">
         <div v-for="(item, index) in events" :key="index" class="wedding-item">
-          <div class="wedding-item-img" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
+          <div class="wedding-item-img" :style="{ backgroundImage: 'url(' + require(`@/assets/${item.img}`) + ')' }"></div>
           <div class="wedding-item-icon" :style="{ backgroundImage: 'url(' + item.icon + ')' }"></div>
           <p class="wedding-item-title">{{ item.title }}</p>
           <p class="wedding-item-des">{{ item.des }}</p>
-          <p class="wedding-item-time">{{ item.time_when }} - {{ item.time }} - {{ item.where }}</p>
+          <p class="wedding-item-time">{{ item.time_when }}</p>
+          <p class="wedding-item-time">{{ item.where }}</p>
         </div>
       </div>
     </div>
@@ -73,6 +74,7 @@ export default {
       width: 100%;
       height: 265px;
       background-size: cover;
+      background-position: center center;
     }
 
     .wedding-item-icon {
@@ -81,7 +83,7 @@ export default {
       background-size: cover;
       position: absolute;
       left: 43%;
-      top: 42%;
+      top: 37%;
     }
 
     .wedding-item-title {
@@ -121,13 +123,17 @@ export default {
       .wedding-item {
         width: auto;
 
+        &-des {
+          padding: 10px 20px;
+        }
+
         .wedding-item-time {
           padding-left: 20px;
           padding-right: 20px;
         }
 
         .wedding-item-icon {
-          top: 38%;
+          top: 34%;
         }
       }
     }

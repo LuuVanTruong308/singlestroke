@@ -1,18 +1,18 @@
 export const MENUBAR = [
   {
-    name: 'HOME',
+    name: 'Trang chủ',
     link: '#',
     router: false
   }, {
-    name: 'GROOM & BRIDE',
+    name: 'Chú rể & Cô dâu',
     link: '#groom&bride',
     router: false
   }, {
-    name: 'WHEN AND WHERE',
+    name: 'Khi nào & Ở đâu',
     link: '#when&where',
     router: false
   }, {
-    name: 'GALLERY',
+    name: 'Album ảnh',
     link: '#gallery',
     router: false
   }, {
@@ -20,7 +20,7 @@ export const MENUBAR = [
     link: '#blog',
     router: false
   }, {
-    name: 'invitation',
+    name: 'Thiệp mời',
     link: '/',
     router: true
   }

@@ -1,25 +1,25 @@
 
 <template>
   <div class="common-countdown">
-    <div class="content">
+    <div class="content" v-if="months > 0">
       <p class="digit">{{ months | twoDigits }}</p>
       <p class="text">{{ months > 1 ? 'months' : 'month' }}</p>
     </div>
     <div class="content">
       <p class="digit">{{ days | twoDigits }}</p>
-      <p class="text">{{ days > 1 ? 'days' : 'day' }}</p>
+      <p class="text">Ngày</p>
     </div>
     <div class="content">
       <p class="digit">{{ hours | twoDigits }}</p>
-      <p class="text">{{ hours > 1 ? 'hours' : 'hour' }}</p>
+      <p class="text">Giờ</p>
     </div>
     <div class="content">
       <p class="digit">{{ minutes | twoDigits }}</p>
-      <p class="text">minutes</p>
+      <p class="text">Phút</p>
     </div>
     <div class="content">
       <p class="digit">{{ seconds | twoDigits }}</p>
-      <p class="text">seconds</p>
+      <p class="text">Giây</p>
     </div>
   </div>
 </template>
@@ -120,7 +120,7 @@ export default {
 
   .content {
     width: auto;
-    margin-right: 20px;
+    margin-right: 60px;
     text-align: center;
     color: #888;
 
@@ -128,6 +128,9 @@ export default {
       font-size: 300%;
       font-style: italic;
       line-height: 0;
+    }
+    @media screen and (max-width: 575px) {
+      margin-right: 30px;
     }
   }
 }

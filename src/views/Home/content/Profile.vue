@@ -84,6 +84,11 @@ export default {
       line-height: 0;
       letter-spacing: 0;
     }
+
+    .calender {
+      font-family: 'Sriracha', cursive;
+      font-size: 18px;
+    }
   }
 
   .profile-image {
