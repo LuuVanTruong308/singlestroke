@@ -3,13 +3,20 @@
     <agile
       :mobileFirst="true"
       :slidesToShow="1"
+      fade="fade"
       :navButtons="false"
-      :autoplay="true"
+      :autoplay="false"
       :autoplaySpeed="20000"
-      :option="Options"
     >
-      <div class="slide" v-for="(slide, index) in listImageSlider" :key="index">
-        <img :src="require(`@/assets/images/slider/${slide.img}`)" alt>
+      <div
+        v-for="(slide, index) in listImageSlider"
+        :key="index"
+        class="slide"
+      >
+        <div
+          class="slide_img"
+          :style="{ backgroundImage: 'url(' + require(`@/assets/images/slider/${slide.img}`) + ')' }"
+        ></div>
       </div>
     </agile>
   </div>
@@ -28,7 +35,6 @@ export default {
   },
   data() {
     return {
-      Options: {},
       listImageSlider: [
         {
           id: 1,
@@ -40,6 +46,10 @@ export default {
         },
         {
           id: 3,
+          img : 'slider4.png'
+        },
+        {
+          id: 4,
           img : 'slider1.png'
         }
       ]
@@ -60,6 +70,12 @@ export default {
   top: 0;
   transition-duration: 0.3s;
   width: 80px;
+}
+.slide_img {
+  width: 100%;
+  height: 100vh;
+  background-position: -108% 30%;
+  background-size: cover;
 }
 .agile__nav-button:hover {
   background-color: rgba(0, 0, 0, 0.5);
