@@ -11,7 +11,7 @@
     <Supporter :support.sync="dataHome.supporter"/>
     <Quote :quote.sync="dataHome.quote"/>
     <Moments id="gallery"/>
-    <Blog :blogs.sync="dataHome.blogs" id="blog" />
+    <!-- <Blog :blogs.sync="dataHome.blogs" id="blog" /> -->
     <Footer :dataFooter.sync="dataHome.footer"/>
   </div>
 </template>
@@ -29,7 +29,7 @@ import CountDownHome from './content/CountDownHome'
 import Registration from './content/Registration'
 import Moments from './content/Moments'
 import Supporter from './content/Supporter'
-import Blog from './content/Blog'
+// import Blog from './content/Blog'
 
 import * as apiHome from '@/api/home.js'
 
@@ -47,8 +47,8 @@ export default {
     CountDownHome,
     Registration,
     Moments,
-    Supporter,
-    Blog
+    Supporter
+    // Blog
   },
 
   data() {

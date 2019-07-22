@@ -83,13 +83,13 @@ export default {
       background-size: cover;
       position: absolute;
       left: 43%;
-      top: 37%;
+      top: 35%;
     }
 
     .wedding-item-title {
       padding-top: 50px;
       font-style: italic;
-      font-weight: 400;
+      font-weight: bold;
       color: #888888;
       font-size: 16px;
       text-transform: uppercase;
@@ -106,8 +106,11 @@ export default {
 
     .wedding-item-time {
       color: #444;
-      font-size: 120%;
+      font-size: 110%;
       font-style: italic;
+      font-weight: bold;
+      padding: 0 15px;
+      display: block;
     }
   }
 }

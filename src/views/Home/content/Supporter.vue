@@ -7,7 +7,7 @@
       <div class="list-image">
         <div v-for="(image, index) in item.images" :key="index" class="image-name">
           <div data-aos="fade-up">
-            <img :src="image.img" :alt="image.name" class="image">
+            <img :src="require(`@/assets/friends/${image.img}`)" :alt="image.name" class="image">
             <p class="name">{{ image.name }}</p>
           </div>
         </div>
@@ -55,16 +55,21 @@ export default {
     .list-image {
       display: flex;
       justify-content: center;
+      margin-top: 40px;
 
       .image-name {
         margin: 20px;
         text-align: center;
         font-size: 14px;
+        & img {
+          width: 200px;
+          overflow: hidden;
+          border-radius: 50%;
+        }
       }
 
       .name {
-        font-size: 16px;
-        text-transform: uppercase;
+        font-size: 18px;
         font-style: italic;
         color: #888;
       }

@@ -164,6 +164,7 @@ export default {
     & a {
       display: block;
       text-decoration: none;
+      font-weight: bold;
     }
   }
 

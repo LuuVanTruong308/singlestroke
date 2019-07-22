@@ -16,10 +16,6 @@ export const MENUBAR = [
     link: '#gallery',
     router: false
   }, {
-    name: 'BLOG',
-    link: '#blog',
-    router: false
-  }, {
     name: 'Thiệp mời',
     link: '/',
     router: true

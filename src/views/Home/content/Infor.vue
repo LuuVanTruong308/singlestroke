@@ -6,10 +6,12 @@
 
     <div data-aos="fade-up">
       <div class="infor" v-for="(info, index) in inforProfile" :key="index">
-        <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + require(`@/assets/images/profile/${info.img}.png`) + ')' }"></div>
+        <div class="infor-img" :class="info.position ? 'right': ''" :style="{ backgroundImage: 'url(' + require(`@/assets/images/profile/${info.img}`) + ')' }"></div>
         <div class="infor-flex">
           <h4 class="name">{{ info.type }} {{ info.name }}</h4>
-          <p class="description">{{ info.description }}</p>
+          <p class="description" slot="description" v-html="info.description">
+            {{ info.description }}
+          </p>
           <div class="infor-link" >
             <div v-for="(icon, index) in info.icons" :key="index">
               <a :href="icon.link">
@@ -66,14 +68,13 @@ export default {
       .name {
         font-size: 120%;
         font-style: italic;
-        font-weight: 500;
+        font-weight: 700;
         text-transform: uppercase;
         color: #444;
         letter-spacing: .1em;
       }
 
       .description {
-        font-family: serif;
         font-size: 14px;
         line-height: 1.85;
         color: #888;
