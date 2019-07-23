@@ -7,15 +7,11 @@
     <div data-aos="fade-up">
       <div class="list-blog">
         <div v-for="blog in blogs" :key="blog.id" class="blog">
-          <div class="image" :style="{ backgroundImage: 'url(' + blog.img + ')' }"></div>
+          <div class="image" :style="{ backgroundImage: 'url(' + require(`@/assets/${blog.img}`) + ')' }"></div>
           <div class="title">{{ blog.title }}</div>
-          <div class="des">{{ blog.des }}</div>
+          <div class="des" slot="des"><span v-html="blog.des"></span>{{ blog.des }}</div>
         </div>
       </div>
-    </div>
-
-    <div class="more" data-aos="fade-up" data-aos-delay="300">
-      <span class="more-blog"> More Blog Posts <i class="fa fa-angle-right"></i></span>
     </div>
   </div>
 </template>
@@ -69,7 +65,7 @@ export default {
 
       .image {
         width: 100%;
-        height: 250px;
+        height: 260px;
         background-size: cover;
         margin-bottom: 30px;
       }
@@ -79,6 +75,7 @@ export default {
         white-space: normal;
         color: #444;
         font-style: italic;
+        font-weight: bolder;
         font-size: 18px;
       }
 
@@ -90,20 +87,6 @@ export default {
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
-    }
-  }
-
-  .more {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-    .more-blog {
-      background-color: #b4d2c8;
-      border-color: #b4d2c8;
-      color: #ffffff;
-      padding: 10px 20px;
-      cursor: pointer;
     }
   }
 }
@@ -127,7 +110,11 @@ export default {
       .blog {
         width: 100%;
         margin: 0;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+
+        & .title {
+          margin-bottom: 10px;
+        }
       }
     }
   }

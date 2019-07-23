@@ -34,8 +34,8 @@ export default {
       invitation: {
         backgroup: 'http://singlestroke.io/demo/jackrose-wp/wp-content/uploads/2015/11/invitation-bg.jpg',
         img: 'hero-logo.png',
-        calender: 'Chủ nhật, ngày 28 tháng 7 năm 2019 ' ,
-        lunaCalender: 'Tức ngày: 13 Tháng 5 Năm Kỷ Hợi',
+        calender: 'Ngày 28 Tháng 7 Năm 2019 ' ,
+        lunaCalender: 'Tức ngày: 26 Tháng 6 Năm Kỷ Hợi',
         location: 'Nhà trai: xóm Minh Đức, Thôn Đa Phúc, Xã Sài Sơn, Huyện Quốc Oai, TP Hà Nội'
       }
     }
@@ -56,7 +56,7 @@ export default {
   &__calender {
     font-family: 'Sriracha', cursive;
     color: $primary-menu-color;
-    font-size: $font-size-normal;
+    font-size: $font-size-medium;
     display: inline-block;
     line-height: 25px;
   }

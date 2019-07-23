@@ -3,7 +3,6 @@
   <div v-if="dataFooter" class="home-footer" :style="{ backgroundImage: 'url(' + require(`@/assets/images/footer/footer.png`) + ')' }">
     <img :src="require(`@/assets/${dataFooter.img}`)" class="preloader-content">
     <p class="text">Bản quyền © {{ new Date().getFullYear() }} — thuộc về <a href="vuquy.vn" style="color: #FFF">Vuquy.vn</a></p>
-
     <div class="footer-overlay"></div>
   </div>
 </template>
